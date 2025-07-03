@@ -9,7 +9,8 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <div className="bg-[#1F1F1F] text-white p-10 rounded-lg m-10">
+    <div className="bg-[#1F1F1F] text-white rounded-lg m-10">
+      <div className="p-10">
       <div className="flex flex-col md:flex-row justify-between max-w-full mx-auto">
         <div className="w-full md:w-1/2 mb-6 md:mb-0 flex items-center min-h-[200px]">
           <div>
@@ -136,14 +137,17 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-
-      <div className="fixed bottom-10 left-10">
-        <Image
-          src={Elipse}
-          alt="Ellipse Decoration"
-          className="object-cover w-full h-full"
-        />
       </div>
+
+      <div className="relative ">
+  <div className="absolute !bottom-0 !left-0 end-0 w-auto h-auto">
+    <Image
+      src={Elipse}
+      alt="Ellipse Decoration"
+      className="object-contain w-full h-full"
+    />
+  </div>
+</div>
     </div>
   );
 };
