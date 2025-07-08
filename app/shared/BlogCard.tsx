@@ -1,0 +1,28 @@
+import React from "react";
+import { BlogCardProps } from "../interfaces/BlogCard";
+import Image from "next/image";
+
+const BlogCard: React.FC<BlogCardProps> = ({ image, date, heading, content, links, height = "152px" }) => {
+  return (
+    <div className="bg-white shadow-lg rounded-lg pb-5">
+      <div className="relative w-full" style={{ height }}>
+        <Image
+          src={image}
+          alt={`${heading} Image`}
+          fill
+          className="object-cover rounded-md"
+        />
+        <div className="absolute -bottom-3 left-0 bg-white p-2 rounded-tl-xl rounded-tr-xl rounded-br-xl">
+          <p className="text-xs text-gray-800">{date}</p>
+        </div>
+      </div>
+      <div className="px-10">
+        <p className="text-2xl font-semibold mt-4">{heading}</p>
+        <p className="text-black mt-2 text-base">{content}</p>
+        <p className="text-sm mt-5 text-gray-600">{links.join(" / ")}</p>
+      </div>
+    </div>
+  );
+};
+
+export default BlogCard;
