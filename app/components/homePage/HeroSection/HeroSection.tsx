@@ -163,7 +163,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="min-h-[870px] sm:min-h-[750px] lg:min-h-screen flex items-center justify-center relative"
       style={{
         background: "linear-gradient(135deg, #101929 0%, #121111 100%)",
       }}
@@ -171,7 +171,7 @@ export default function HeroSection() {
       {/* Background Pattern/Noise Effect */}
       <div className="absolute inset-0 opacity-30">
         <div
-          className="w-full h-full"
+          className="!w-full h-full"
           style={{
             backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0)`,
             backgroundSize: "20px 20px",
@@ -192,7 +192,7 @@ export default function HeroSection() {
             className="font-bold leading-tight mb-8"
             variants={fadeInUp}
             style={{
-              fontSize: "clamp(2.5rem, 8vw, 3rem)",
+              fontSize: "clamp(2rem, 8vw, 3rem)",
               lineHeight: "1.1",
             }}
           >
@@ -269,7 +269,7 @@ export default function HeroSection() {
       {/* Background Decoration */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-blue-600/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl" />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-blue-600/5 to-purple-600/5 rounded-full blur-3xl" />
+      {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-blue-600/5 to-purple-600/5 rounded-full blur-3xl" /> */}
     </section>
   );
 }

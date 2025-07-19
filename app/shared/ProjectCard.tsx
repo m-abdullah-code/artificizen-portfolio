@@ -10,12 +10,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   backgroundColor = "bg-gray-200",
 }) => {
   return (
-    <div className="relative w-full overflow-hidden px-10 pb-10">
+    <div className="relative w-full overflow-hidden mb-10 lg:h-[550px]">
       <div
         className={`rounded-3xl flex flex-col md:flex-row justify-between items-center relative z-10 ${backgroundColor}`}
       >
-        <div className="w-[50%] p-5 lg:p-20">
-          <div className="mb-[150px]">
+        <div className="md:w-[50%] p-5 lg:p-20">
+          <div className=" mb-[50px] lg:mb-[100px]">
             <Image
               src={logoImage}
               alt="Logo"
@@ -28,7 +28,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <div className="max-w-[100%]">{children}</div>
         </div>
 
-        <div className="w-full relative h-[500px] lg:h-[550px]">
+        {/* <div className="w-full relative h-[450px] lg:h-[550px]"> */}
+        <div className="w-full h-[550px] relative">
           <Image
             src={bgImage}
             alt="Background Visual"
@@ -39,12 +40,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       </div>
 
-      <div className="absolute bottom-10 right-10 z-20 w-[80%] md:w-[50%] xl:w-[800px] h-[450px]">
+      <div className="absolute bottom-0 md:top-40 lg:bottom-0 right-0 xl:-right-21 z-20 w-[80%] md:w-[50%] xl:w-[800px] h-[450px]">
+        {/* <div className="absolute bottom-10 -right-90 z-20 w-full h-[80%]"> */}
         <Image
           src={overlayImage}
           alt="Overlay Decoration"
           fill
-          className="object-cover rounded-tl-3xl"
+          className=" object-cover xl:object-contain rounded-tl-3xl"
         />
       </div>
     </div>

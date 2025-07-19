@@ -1,12 +1,12 @@
 import { StaticImageData } from "next/image";
 
 export interface CardData {
-  topText: string;
+  topText?: string;
   heading: string[];
   content: string[];
   image: StaticImageData;
-  buttonText: string;
+  buttonText?: string;
   imagePosition?: "left" | "right";
   lineIndex?: number;
-  wordCount?: number;  
+  wordCount?: number;
 }

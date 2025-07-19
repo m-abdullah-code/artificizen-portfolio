@@ -5,7 +5,7 @@ import { cardData } from "@/app/data/HomePage/AboutUsSection";
 const AboutUsSection = () => {
   return (
     <div>
-      <div className=" p-10 mt-8 w-full">
+      <div className=" mt-8 w-full">
         {cardData.map((card, index) => (
           <GenericCard
             key={index}

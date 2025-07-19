@@ -5,11 +5,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { HiChevronDown, HiMenu, HiX } from "react-icons/hi";
 import { navigationItems } from "@/app/data/NavData";
+import { usePathname } from "next/navigation";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,12 +26,12 @@ export default function Navigation() {
     transparent: {
       backgroundColor: "rgba(255, 255, 255, 0)",
       backdropFilter: "blur(0px)",
-      borderBottom: "1px solid rgba(255, 255, 255, 0)",
+      // borderBottom: "1px solid rgba(255, 255, 255, 0)",
     },
     solid: {
       backgroundColor: "rgba(255, 255, 255, 0.95)",
       backdropFilter: "blur(10px)",
-      borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
+      // borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
     },
   };
 
@@ -74,10 +76,20 @@ export default function Navigation() {
       variants={navVariants}
       animate={isScrolled ? "solid" : "transparent"}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="fixed top-0 left-0 right-0 z-50 border-b"
+      className="fixed top-0 left-0 right-0 z-50"
     >
-      <div className="container">
-        <div className="flex items-center justify-between py-6 min-h-[80px]">
+      {/* <div className="container max-w-[94%]"> */}
+      {/* <div
+        className={`container max-w-[94%] rounded-full ${
+          pathname === "/" ? "bg-transparent" : "bg-black"
+        }`}
+      > */}
+      <div
+        className={`container max-w-[94%] ${
+          pathname === "/" ? "bg-transparent" : "bg-black"
+        } ${isMobileMenuOpen ? "rounded-none" : "rounded-full"}`}
+      >
+        <div className="flex items-center justify-between py-5 min-h-[80px]">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
@@ -106,8 +118,10 @@ export default function Navigation() {
                   className={`
                     flex items-center space-x-1 text-sm font-medium transition-colors
                     ${
-                      isScrolled
-                        ? "text-foreground hover:text-primary"
+                      pathname === "/"
+                        ? isScrolled
+                          ? "text-foreground hover:text-primary"
+                          : "text-white hover:text-blue-200"
                         : "text-white hover:text-blue-200"
                     }
                   `}
@@ -178,17 +192,13 @@ export default function Navigation() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`
                 lg:hidden p-2 rounded-md transition-colors
-                ${
-                  isScrolled
-                    ? "text-foreground hover:bg-muted"
-                    : "text-white hover:bg-white/10"
-                }
+                ${isScrolled ? "hover:bg-muted" : "hover:bg-white/10"}
               `}
             >
               {isMobileMenuOpen ? (
-                <HiX className="w-6 h-6" />
+                <HiX className="w-6 h-6 text-white" />
               ) : (
-                <HiMenu className="w-6 h-6" />
+                <HiMenu className="w-6 h-6 text-white" />
               )}
             </button>
           </div>
@@ -234,7 +244,7 @@ export default function Navigation() {
                 ))}
 
                 {/* Mobile CTA */}
-                <div className="px-4 pt-4 border-t">
+                <div className="px-4 pt-4 ">
                   <Link
                     href="/contact"
                     onClick={() => setIsMobileMenuOpen(false)}

@@ -2,7 +2,14 @@ import React from "react";
 import { BlogCardProps } from "../interfaces/BlogCard";
 import Image from "next/image";
 
-const BlogCard: React.FC<BlogCardProps> = ({ image, date, heading, content, links, height = "152px" }) => {
+const BlogCard: React.FC<BlogCardProps> = ({
+  image,
+  date,
+  heading,
+  content,
+  links,
+  height = "152px",
+}) => {
   return (
     <div className="bg-white shadow-lg rounded-lg pb-5">
       <div className="relative w-full" style={{ height }}>
@@ -16,8 +23,10 @@ const BlogCard: React.FC<BlogCardProps> = ({ image, date, heading, content, link
           <p className="text-xs text-gray-800">{date}</p>
         </div>
       </div>
-      <div className="px-10">
-        <p className="text-2xl font-semibold mt-4">{heading}</p>
+      <div className="md:px-10">
+        <p className="text-[clamp(1.25rem, 2vw, 1.5rem)] font-semibold mt-4">
+          {heading}
+        </p>
         <p className="text-black mt-2 text-base">{content}</p>
         <p className="text-sm mt-5 text-gray-600">{links.join(" / ")}</p>
       </div>

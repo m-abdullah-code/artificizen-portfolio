@@ -7,25 +7,26 @@ export const blogData: BlogCardData[] = [
     image: Picture,
     date: "12-05-2025",
     heading: "Is Artificial Intelligence accessible to businesses of all sizes",
-    content:
-      "Yes, AI solutions are becoming increasingly accessible to businesses. Yes, AI solutions are becoming increasingly accessible to businesses. Yes, AI solutions are becoming increasingly accessible to businesses......",
+    content: "",
     links: ["AI", "Business"],
-    height: "280px", 
+    height: "280px",
   },
   {
     image: Picture2,
     date: "01-06-2025",
-    heading: "How can I get started with Artificial Intelligence for my business?",
+    heading:
+      "How can I get started with Artificial Intelligence for my business?",
     content: "",
     links: ["AI", "Business"],
-    height: "152px"
+    height: "152px",
   },
   {
     image: Picture2,
     date: "02-06-2025",
-    heading: "How can I get started with Artificial Intelligence for my business?",
+    heading:
+      "How can I get started with Artificial Intelligence for my business?",
     content: "",
     links: ["AI", "Business"],
-    height: "152px"
+    height: "152px",
   },
 ];

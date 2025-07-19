@@ -1,12 +1,12 @@
 import { StoryCardProps } from "@/app/interfaces/StoryCard";
-import { StaticImageData } from "next/image";
+// import { StaticImageData } from "next/image";
 
-const placeholderImage: StaticImageData = {
-  src: "",
-  height: 0,
-  width: 0,
-  blurDataURL: "",
-} as StaticImageData;
+// const placeholderImage: StaticImageData = {
+//   src: "",
+//   height: 0,
+//   width: 0,
+//   blurDataURL: "",
+// } as StaticImageData;
 
 export const storyData: StoryCardProps[] = [
   {

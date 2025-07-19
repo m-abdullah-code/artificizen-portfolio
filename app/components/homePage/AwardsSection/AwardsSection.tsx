@@ -3,10 +3,10 @@ import Image from "next/image";
 import { awardsData } from "../../../data/HomePage/AwardsSection";
 const AwardsSection = () => {
   return (
-    <div className="p-10">
+    <div>
       <p className="text-base mb-2">{awardsData.headingPrefix}</p>
 
-      <p className="text-5xl max-w-4xl leading-tight mb-10">
+      <p className="text-[clamp(2rem,5vw,3.25rem)] leading-[clamp(2.5rem,6vw,4.063rem)] max-w-4xl leading-tight mb-10">
         <span className="bg-gradient-to-r from-[#0B5CFF99] to-[#FF710C] bg-clip-text text-transparent">
           {awardsData.headingGradient}
         </span>{" "}

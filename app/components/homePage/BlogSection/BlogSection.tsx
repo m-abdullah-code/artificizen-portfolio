@@ -4,9 +4,9 @@ import React from "react";
 
 const BlogSection = () => {
   return (
-    <div className="p-10">
+    <div>
       <p className="text-base">/ blog /</p>
-      <p className="max-w-4xl text-5xl leading-[3.5rem]">
+      <p className="max-w-4xl text-[clamp(2rem,5vw,3.25rem)] leading-[clamp(2.5rem,6vw,3.5rem)]">
         <span className="bg-gradient-to-r from-[#0B5CFF99] to-[#FF710C] bg-clip-text text-transparent">
           Exploring the
         </span>{" "}
@@ -15,7 +15,7 @@ const BlogSection = () => {
       <div className="flex flex-col md:flex-row gap-6 pt-6">
         {/* Left Side Card */}
         <div className="flex-1">
-          <BlogCard {...blogData[0]}/>
+          <BlogCard {...blogData[0]} />
         </div>
 
         {/* Right Side - 2 stacked cards */}

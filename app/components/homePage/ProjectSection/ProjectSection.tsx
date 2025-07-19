@@ -5,9 +5,9 @@ import { projectsData } from "../../../data/HomePage/ProjectSection";
 const Home = () => {
   return (
     <>
-      <div className="pl-10 pt-10">
+      <div>
         <p className="text-base text-black">/ Our Projects /</p>
-        <p className="text-5xl lg:max-w-[40%] leading-[3.5rem] mb-5">
+        <p className="text-[clamp(2rem,5vw,3rem)] leading-[clamp(2rem,5.5vw,3.5rem)] lg:max-w-[50%] mb-5">
           <span className="bg-gradient-to-r from-[#0B5CFF99] to-[#FF710C] bg-clip-text text-transparent">
             Awesome Projects
           </span>{" "}
@@ -22,10 +22,22 @@ const Home = () => {
           logoImage={project.logoImage}
           backgroundColor={project.backgroundColor}
         >
-          <h1 className={`text-2xl font-bold ${project.backgroundColor === "bg-black" ? "text-white" : "text-gray-800"}`}>
+          <h1
+            className={`text-[clamp(1.125rem, 2.5vw, 1.5rem)] font-bold ${
+              project.backgroundColor === "bg-black"
+                ? "text-white"
+                : "text-gray-800"
+            }`}
+          >
             {project.title}
           </h1>
-          <p className={`text-base ${project.backgroundColor === "bg-black" ? "text-white" : "text-gray-600"} mt-4`}>
+          <p
+            className={`text-base ${
+              project.backgroundColor === "bg-black"
+                ? "text-white"
+                : "text-gray-600"
+            } mt-4`}
+          >
             {project.description}
           </p>
         </ProjectCard>

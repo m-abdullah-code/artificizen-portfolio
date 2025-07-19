@@ -23,7 +23,7 @@ export const navigationItems: NavItem[] = [
       { label: "SaaS", href: "/case-studies/saas" },
     ],
   },
-  { label: "ABOUT US", href: "/about" },
+  { label: "ABOUT US", href: "/about-us" },
   { label: "CAREER", href: "/career" },
   { label: "BLOG", href: "/blog" },
   { label: "BRING YOUR CLIENT", href: "/partnership" },

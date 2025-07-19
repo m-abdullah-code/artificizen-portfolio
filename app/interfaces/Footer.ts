@@ -1,5 +1,3 @@
-import { IconType } from "react-icons";
-
 // Define the type for valid icon keys
 export type IconKey =
   | "MdWhatsapp"
@@ -13,6 +11,13 @@ export type IconKey =
 export interface Contact {
   icon: IconKey;
   value: string;
+}
+
+export interface FooterProps {
+  headings?: string[];
+  description?: string;
+  gradientIndex?: number;
+  gradientWordCount?: number;
 }
 
 // Define the FooterData interface

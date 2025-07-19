@@ -4,10 +4,10 @@ import { servicesData } from "@/app/data/HomePage/ServicesCard";
 
 const ServicesSection = () => {
   return (
-    <div className="p-10">
+    <div>
       <div className="max-w-5xl">
         /services/
-        <p className="text-5xl leading-[65px]">
+        <p className="text-[clamp(2rem,5vw,3.25rem)] leading-[clamp(2.5rem,6vw,4.063rem)]">
           <span className="bg-gradient-to-r from-[#0B5CFF99] to-[#FF710C] bg-clip-text text-transparent">
             No Fluff. Just Real,
           </span>{" "}

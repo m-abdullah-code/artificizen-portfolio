@@ -15,13 +15,14 @@ const CardWithContent = ({
   return (
     <div className="flex flex-col md:flex-row">
       <div
-        className={`w-full md:w-1/2 lg:px-10 ${
+        className={`w-full md:w-1/2 ${
           imagePosition === "right" ? "md:order-2" : "md:order-1"
         }`}
       >
         {image && (
           <Image
             src={image}
+            alt="Image"
             width={400}
             height={400}
             className="w-full lg:max-h-[85%] 2xl:max-h-[55%] object-cover rounded-[25px]"
@@ -35,7 +36,12 @@ const CardWithContent = ({
       >
         <div>
           <p className="text-base text-gray-600 mb-2">{topText}</p>
-          <h2 className="text-5xl font-semibold mb-4">
+          <h2
+            className=" font-semibold leading-12 mb-4"
+            style={{
+              fontSize: "clamp(2rem, 5vw, 3rem)",
+            }}
+          >
             {heading.map((line, currentLineIndex) => {
               const words = line.split(" ");
               if (currentLineIndex === lineIndex && wordCount > 0) {
@@ -66,11 +72,13 @@ const CardWithContent = ({
               </p>
             ))}
           </div>
-          <div>
-            <button className="text-sm w-[190px] px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
-              {buttonText}
-            </button>
-          </div>
+          {buttonText && (
+            <div>
+              <button className="text-sm w-[190px] px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
+                {buttonText}
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

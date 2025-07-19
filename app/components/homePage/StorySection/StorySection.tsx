@@ -6,7 +6,7 @@ import { storyData } from "@/app/data/HomePage/UserStory";
 const StorySection = () => {
   return (
     <>
-      <div className="m-10 p-5 bg-[#F0F2F4] rounded-xl">
+      <div className="mt-10 p-5 bg-[#F0F2F4] rounded-xl">
         <div className="flex flex-col items-center justify-center text-center px-4 mt-10">
           <div className="flex gap-1 mb-4">
             <FaStar color="#FAC12E" />
@@ -16,7 +16,10 @@ const StorySection = () => {
             <FaStar color="#FAC12E" />
           </div>
 
-          <p className="text-5xl max-w-[650px] ">
+          <p
+            className="max-w-[650px]"
+            style={{ fontSize: "clamp(2rem, 6vw, 3rem)" }}
+          >
             User stories: hear what others love about{" "}
             <span className="bg-gradient-to-r from-[#0B5CFF99] to-[#FF710C] bg-clip-text text-transparent">
               Artificizen
