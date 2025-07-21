@@ -1,86 +1,23 @@
-import { StaticImageData } from "next/image";
-import Background from "../../../public/assets/AboutUs/About Us bg.png"; // Adjust path
-import CardImage1 from "../../../public/assets/AboutUs/pioneeringAI.jpg.png"; // Adjust path
-import CardImage2 from "../../../public/assets/AboutUs/philosphy.jpg.png"; // Adjust path
-import Umair from "../../../public/assets/AboutUs/umair.png"; // Adjust path
-import Talha from "../../../public/assets/AboutUs/talha.png"; // Adjust path
-import Asfar from "../../../public/assets/AboutUs/asfar.png"; // Adjust path
-import Zain from "../../../public/assets/AboutUs/zain.png"; // Adjust path
-import Shoaib from "../../../public/assets/AboutUs/sohaib.png"; // Adjust path
-import Neuro from "../../../public/assets/AboutUs/how it works.png.png"; // Adjust path
-import Dart from "../../../public/assets/AboutUs/dart.png";
-import Credit from "../../../public/assets/AboutUs/creditfixerr.png";
-import Meomind from "../../../public/assets/AboutUs/meomind.png";
-import Google from "../../../public/assets/AboutUs/google.png";
-import Iqvia from "../../../public/assets/AboutUs/iqvia.png";
-
-export interface CardData {
-  topText: string;
-  heading: string[];
-  content: string[];
-  image: StaticImageData;
-  buttonText: string;
-  imagePosition: "left" | "right";
-  lineIndex: number;
-  wordCount: number;
-}
-
-export interface TeamMember {
-  src: StaticImageData;
-  name: string;
-  role: string;
-  designation: string;
-}
-
-export interface HowItWorksPoint {
-  title: string;
-  content: string;
-}
-
-export interface WhyChooseUsItem {
-  title: string;
-  content: string;
-}
-
-export interface ImageRowItem {
-  src: StaticImageData;
-  alt: string;
-}
-
-export interface AboutUsPageData {
-  background: StaticImageData;
-  overlay: {
-    heading: string;
-    subheading: string;
-    quote: string;
-    author: string;
-  };
-  cards: CardData[];
-  team: {
-    heading: string;
-    subheading: string;
-    buttonText: string;
-    members: TeamMember[];
-    creativeLead: {
-      image: StaticImageData;
-      name: string;
-      role: string;
-    };
-  };
-  howItWorks: {
-    heading: string;
-    subheading: string;
-    points: HowItWorksPoint[];
-    additionalText: string[];
-    image: StaticImageData;
-  };
-  whyChooseUs: {
-    label: string;
-    heading: string;
-    items: WhyChooseUsItem[];
-  };
-  imageRow: ImageRowItem[];
-}
+import Background from "../../../public/assets/AboutUs/About Us bg.png";
+import CardImage1 from "../../../public/assets/AboutUs/pioneeringAI.jpg.png";
+import CardImage2 from "../../../public/assets/AboutUs/philosphy.jpg.png";
+import Umair from "../../../public/assets/AboutUs/umair.png";
+import Talha from "../../../public/assets/AboutUs/talha.png";
+import Asfar from "../../../public/assets/AboutUs/asfar.png";
+import Zain from "../../../public/assets/AboutUs/zain.png";
+import Shoaib from "../../../public/assets/AboutUs/sohaib.png";
+import Neuro from "../../../public/assets/AboutUs/how it works.png.png";
+// import Dart from "../../../public/assets/AboutUs/dart.png";
+// import Credit from "../../../public/assets/AboutUs/creditfixerr.png";
+// import Meomind from "../../../public/assets/AboutUs/meomind.png";
+// import Google from "../../../public/assets/AboutUs/google.png";
+// import Iqvia from "../../../public/assets/AboutUs/iqvia.png";
+import Dart from "../../../public/assets/AboutUs/dart1.png";
+import Credit from "../../../public/assets/AboutUs/creditfixr1.png";
+import Meomind from "../../../public/assets/AboutUs/meomind1.png";
+import Google from "../../../public/assets/AboutUs/google1.png";
+import Iqvia from "../../../public/assets/AboutUs/iqvia1.png";
+import { AboutUsPageData } from "@/app/interfaces/AboutUsPage";
 
 export const aboutUsData: AboutUsPageData = {
   background: Background,
@@ -250,4 +187,11 @@ export const aboutUsData: AboutUsPageData = {
     { src: Google, alt: "Google" },
     { src: Iqvia, alt: "Iqvia" },
   ],
+  footer: {
+    headings: ["Building the Future Together"],
+    description:
+      "We're selective about the projects we take on, focusing on opportunities where we can deliver exceptional value and form lasting partnerships. If you're ready to explore how AI can transform your business, elevate your customer experience, or create entirely new possibilities, we're ready to bring that vision to life.\nLet's build intelligence that matters.",
+    gradientIndex: 0,
+    gradientWordCount: 1,
+  },
 };

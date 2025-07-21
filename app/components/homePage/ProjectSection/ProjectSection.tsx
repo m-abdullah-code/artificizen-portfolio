@@ -11,7 +11,7 @@ const Home = () => {
           <span className="bg-gradient-to-r from-[#0B5CFF99] to-[#FF710C] bg-clip-text text-transparent">
             Awesome Projects
           </span>{" "}
-          We've Shipped
+          We have Shipped
         </p>
       </div>
       {projectsData.map((project, index) => (

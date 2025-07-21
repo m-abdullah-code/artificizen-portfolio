@@ -65,3 +65,10 @@ export interface FooterData {
     links: string[];
   };
 }
+
+export interface FooterContent {
+  headings: string[];
+  description: string;
+  gradientIndex: number;
+  gradientWordCount: number;
+}

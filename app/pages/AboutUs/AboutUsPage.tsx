@@ -71,7 +71,7 @@ const AboutUsPage = () => {
             key={index}
             src={image.src}
             alt={image.alt}
-            className="w-[160px] h-[50px]"
+            className="w-[130px] h-[50px]"
           />
         ))}
       </div>
@@ -245,12 +245,10 @@ const AboutUsPage = () => {
         </div>
       </div>
       <Footer
-        headings={["Building the Future Together"]}
-        description="We're selective about the projects we take on, focusing on opportunities where we can deliver exceptional value and form lasting partnerships. If you're ready to explore how AI can transform your business, elevate your customer experience, or create entirely new possibilities, we're ready to bring that vision to life.
-Let's build intelligence that matters.
-"
-        gradientIndex={0}
-        gradientWordCount={1}
+        headings={aboutUsData.footer.headings}
+        description={aboutUsData.footer.description}
+        gradientIndex={aboutUsData.footer.gradientIndex}
+        gradientWordCount={aboutUsData.footer.gradientWordCount}
       />
     </div>
   );

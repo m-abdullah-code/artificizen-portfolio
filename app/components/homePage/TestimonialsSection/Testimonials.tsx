@@ -22,7 +22,7 @@ const InteractiveCarouselCard: React.FC = () => {
     return () => {
       if (interval) clearInterval(interval);
     };
-  }, [playing, carouselData.carouselImages.length]);
+  }, [playing]);
 
   return (
     <div className="flex flex-col lg:flex-row w-full rounded-lg overflow-hidden mt-12 mb-16">
