@@ -30,16 +30,16 @@ const CardWithContent = ({
         )}
       </div>
       <div
-        className={`w-full md:w-1/2 p-6 flex flex-col justify-between ${
+        className={`w-full md:w-1/2 p-1 md:p-6 flex flex-col justify-between ${
           imagePosition === "right" ? "md:order-1" : "md:order-2"
         }`}
       >
         <div>
-          <p className="text-base text-gray-600 mb-2">{topText}</p>
+          <p className="text-base text-gray-600 mb-2 mt-5 lg:mt-0">{topText}</p>
           <h2
-            className=" font-semibold leading-12 mb-4"
+            className=" font-semibold leading-12 mb-4 leading-[clamp(2rem,6vw,3rem)]"
             style={{
-              fontSize: "clamp(2rem, 5vw, 3rem)",
+              fontSize: "clamp(1.5rem, 5vw, 2.7rem)",
             }}
           >
             {heading.map((line, currentLineIndex) => {

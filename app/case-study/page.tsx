@@ -3,7 +3,7 @@ import CaseStudyPage from "../pages/CaseStudyPage/CaseStudyPage";
 
 const page = () => {
   return (
-    <div>
+    <div >
       <CaseStudyPage />
     </div>
   );

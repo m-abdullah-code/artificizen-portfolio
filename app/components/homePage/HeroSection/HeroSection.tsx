@@ -192,7 +192,7 @@ export default function HeroSection() {
             className="font-bold leading-tight mb-8"
             variants={fadeInUp}
             style={{
-              fontSize: "clamp(2rem, 8vw, 3rem)",
+              fontSize: "clamp(1.5rem, 8vw, 3rem)",
               lineHeight: "1.1",
             }}
           >

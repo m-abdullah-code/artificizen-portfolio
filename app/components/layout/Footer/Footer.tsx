@@ -36,7 +36,7 @@ const Footer: React.FC<FooterProps> = ({
 
   return (
     <div className="bg-[#1F1F1F] text-white rounded-lg">
-      <div className="p-10">
+      <div className=" p-5 md:p-10">
         <div className="flex flex-col lg:flex-row justify-between max-w-full mx-auto">
           <div className="w-full lg:w-1/2 mb-6 md:mb-0 flex items-center min-h-[200px]">
             <div>
@@ -47,7 +47,7 @@ const Footer: React.FC<FooterProps> = ({
                 ? headings.map((heading, index) => (
                     <h1
                       key={index}
-                      className="text-[clamp(2rem,5vw,3.5rem)] leading-[50px] lg:leading-[65px]"
+                      className="text-[clamp(1.5rem,5vw,3.5rem)] leading-[clamp(2rem,6vw,4.063rem)]"
                     >
                       {heading.split(" ").map((word, wordIndex, words) => {
                         const startIndex = gradientIndex;
@@ -101,8 +101,11 @@ const Footer: React.FC<FooterProps> = ({
               </p>
             </div>
           </div>
-          <div className="w-full mt-10 lg:mt-0 lg:w-1/3 bg-white p-12 rounded-lg shadow-md">
-            <h3 className="text-3xl text-black font-bold mb-4">
+          <div className="w-full mt-10 lg:mt-0 lg:w-1/3 bg-white p-5 md:p-12 rounded-lg shadow-md">
+            <h3
+              className="text-black font-bold mb-4"
+              style={{ fontSize: "clamp(1.5rem, 2vw + 1rem, 1.875rem)" }}
+            >
               {typedFooterData.contactForm.title}
             </h3>
             <p className="text-base text-black">

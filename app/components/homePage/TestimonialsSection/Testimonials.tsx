@@ -71,7 +71,7 @@ const InteractiveCarouselCard: React.FC = () => {
       <div className="lg:w-1/2 p-6 flex items-center justify-center ">
         <div className=" lg:max-w-[450px]">
           <p className="text-base">{carouselData.testimonial.label}</p>
-          <p className="text-[clamp(2rem,5vw,3.25rem)] leading-[clamp(2.5rem,6vw,4.063rem)]">
+          <p className="text-[clamp(1.5rem,5vw,3.2rem)] leading-[clamp(2rem,6vw,3.5rem)]">
             {carouselData.testimonial.heading}
           </p>
           <p className="text-[100px] font-bold text-white drop-shadow-[0_0_2px_black]">

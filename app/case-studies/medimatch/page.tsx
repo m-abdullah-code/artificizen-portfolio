@@ -1,7 +1,7 @@
 import React from "react";
 import CaseStudiesDynamicPage from "@/app/components/CaseStudiesDynamicPage/caseStudiesDynamicPage";
-import { caseStudiesData } from "../../data/CaseStudyPage/AgentForge";
-const AgentForgepage = () => {
+import { caseStudiesData } from "../../data/CaseStudyPage/MediMatch";
+const MediMatchpage = () => {
   return (
     <div className="mt-20 p-5 md:p-10">
       <CaseStudiesDynamicPage data={caseStudiesData} />
@@ -9,4 +9,4 @@ const AgentForgepage = () => {
   );
 };
 
-export default AgentForgepage;
+export default MediMatchpage;

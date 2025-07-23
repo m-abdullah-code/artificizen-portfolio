@@ -7,7 +7,7 @@ const ServicesSection = () => {
     <div>
       <div className="max-w-5xl">
         /services/
-        <p className="text-[clamp(2rem,5vw,3.25rem)] leading-[clamp(2.5rem,6vw,4.063rem)]">
+        <p className="text-[clamp(1.5rem,5vw,3.25rem)] leading-[clamp(2rem,6vw,4.063rem)]">
           <span className="bg-gradient-to-r from-[#0B5CFF99] to-[#FF710C] bg-clip-text text-transparent">
             No Fluff. Just Real,
           </span>{" "}

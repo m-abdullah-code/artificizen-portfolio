@@ -5,7 +5,7 @@ import React from "react";
 
 const CaseStudyPage = () => {
   return (
-    <div className="p-5 md:p-10 mt-18">
+    <div className="p-5 md:p-10 mt-20">
       <TopBannerCard
         imageSrc={caseStudyData.topBanner.imageSrc}
         title={caseStudyData.topBanner.title}

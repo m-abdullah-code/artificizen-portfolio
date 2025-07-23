@@ -6,8 +6,8 @@ const Home = () => {
   return (
     <>
       <div>
-        <p className="text-base text-black">/ Our Projects /</p>
-        <p className="text-[clamp(2rem,5vw,3rem)] leading-[clamp(2rem,5.5vw,3.5rem)] lg:max-w-[50%] mb-5">
+        <p className="text-base text-black mt-10 md:mt-0">/ Our Projects /</p>
+        <p className="text-[clamp(1.5rem,5vw,3rem)] leading-[clamp(2rem,5.5vw,3.5rem)] lg:max-w-[50%] mb-5">
           <span className="bg-gradient-to-r from-[#0B5CFF99] to-[#FF710C] bg-clip-text text-transparent">
             Awesome Projects
           </span>{" "}

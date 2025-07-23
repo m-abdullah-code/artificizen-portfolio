@@ -15,7 +15,7 @@ const HomePage = () => {
   return (
     <>
       <HeroSection />
-      <div className="p-10">
+      <div className="p-5 md:p-10 ">
         <ServicesSection />
         <AboutUsSection />
         <ProjectSection />
@@ -23,7 +23,7 @@ const HomePage = () => {
         <TestimonialsSection />
       </div>
       <AiFuture />
-      <div className="p-10">
+      <div className="p-5 md:p-10 ">
         <ChooseUs />
         <BlogSection />
         <StorySection />
