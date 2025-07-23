@@ -1,20 +1,22 @@
 import { BlogSectionData } from "@/app/interfaces/BlogCard";
-import Picture from "../../../public/assets/Blog/Picture.png";
-import Picture2 from "../../../public/assets/Blog/Picture2.png";
+import Robot from "../../../../public/assets/Services/Robot.png";
+import Machine from "../../../../public/assets/Services/machine.png";
+import Tower from "../../../../public/assets/Services/Tower.png";
 
 export const blogSectionData: BlogSectionData = {
   cards: [
     {
-      image: Picture,
+      image: Robot,
       date: "12-05-2025",
       heading:
         "Is Artificial Intelligence accessible to businesses of all sizes",
-      content: "",
+      content:
+        "Yes, AI solutions are becoming increasingly accessible to businesses . Yes, AI solutions are becoming increasingly accessible to businesses . Yes, AI solutions are becoming increasingly accessible to businesses",
       links: ["AI", "Business"],
       height: "280px",
     },
     {
-      image: Picture2,
+      image: Machine,
       date: "01-06-2025",
       heading:
         "How can I get started with Artificial Intelligence for my business?",
@@ -23,7 +25,7 @@ export const blogSectionData: BlogSectionData = {
       height: "152px",
     },
     {
-      image: Picture2,
+      image: Tower,
       date: "02-06-2025",
       heading:
         "How can I get started with Artificial Intelligence for my business?",

@@ -6,10 +6,16 @@ export const navigationItems: NavItem[] = [
     href: "/services",
     hasDropdown: true,
     dropdownItems: [
+      { label: "AI Solutions", href: "/services/ai-solutions" },
+      { label: "Chatbot Solutions", href: "/services/chatbot-solutions" },
+      { label: "AI SAAS Development", href: "/services/saas-development" },
+      { label: "MVP Development", href: "/services/mvp-development" },
+      { label: "Enterprise AI Automation", href: "/services/ai-automation" },
+      { label: "Cloud Infrastructure", href: "/services/cloud-infrastructure" },
       { label: "Web Development", href: "/services/web-development" },
       { label: "Mobile Apps", href: "/services/mobile-apps" },
-      { label: "AI Solutions", href: "/services/ai-solutions" },
-      { label: "Digital Marketing", href: "/services/digital-marketing" },
+      { label: "UI/UX Design", href: "/services/ui-ux" },
+      { label: "Remote Staffing", href: "/services/remote-staffing" },
     ],
   },
   {

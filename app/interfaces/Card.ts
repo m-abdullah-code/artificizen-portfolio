@@ -5,3 +5,10 @@ export interface CardData {
   content: string;
   image?: StaticImageData;
 }
+
+export interface SectionData {
+  cards: CardData[];
+  title: string;
+  subtitle: string;
+  path: string;
+}

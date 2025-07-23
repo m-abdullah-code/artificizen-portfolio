@@ -1,0 +1,17 @@
+import Services from "../../../../public/assets/Services/Services.png";
+import { ServicesCardData } from "../../../interfaces/ServicesPage";
+
+export const serviceData: ServicesCardData = {
+  image: Services,
+  heading: "End-to-End AI Services",
+  content:
+    "Not just AI for show - but solutions that drive impact and results.",
+
+  footer: {
+    headings: ["We are always ready to help you and answer your questions"],
+    description:
+      "Pacific hake false trevally queen parrotfish black prickleback mosshead warbonnet sweeper! Greenling sleeper.",
+    gradientIndex: 0,
+    gradientWordCount: 2,
+  },
+};
