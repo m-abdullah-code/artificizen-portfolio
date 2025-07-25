@@ -383,7 +383,7 @@ import TopBannerCard from "@/app/shared/TopBannerCard";
 import React from "react";
 import Image from "next/image";
 import BulletIcon from "../../../public/assets/CaseStudy/Icon.png";
-import { CaseStudiesData } from "@/app/interfaces/CaseStudyPage"; // Adjust path
+import { CaseStudiesData } from "@/app/interfaces/CaseStudyPage";
 import Footer from "../layout/Footer/Footer";
 import { caseStudiesData } from "@/app/data/CaseStudyPage/AgentForge";
 
