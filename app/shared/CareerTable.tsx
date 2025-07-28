@@ -9,11 +9,11 @@ const TableComponent: React.FC<TableComponentProps> = ({ rows }) => {
       {rows.map((row, index) => (
         <div
           key={index}
-          className="grid grid-cols-[1fr_2fr_1fr] gap-6 py-6 border-b mt-10 mb-10"
+          className="grid grid-cols-1 lg:grid-cols-[1fr_2fr_1fr] gap-6 py-6 border-b mt-10 mb-10"
         >
           {/* Column 1 */}
           <div className="flex flex-col gap-3">
-            <div className="flex gap-2">
+            <div className="flex gap-5">
               <button className="py-2 text-[#C1C1C1] text-base">
                 {row.button1}
               </button>
