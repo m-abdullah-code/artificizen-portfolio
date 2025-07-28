@@ -93,32 +93,43 @@
 
 // export default page;
 
-import React from "react";
-import TopBannerCard from "../shared/TopBannerCard";
-import Footer from "../components/layout/Footer/Footer";
-import { PageData } from "../interfaces/careerPage";
-import { careerData } from "../data/Career/Career";
-import TableComponent from "../shared/CareerTable";
+// import React from "react";
+// import TopBannerCard from "../shared/TopBannerCard";
+// import Footer from "../components/layout/Footer/Footer";
+// import { PageData } from "../interfaces/careerPage";
+// import { careerData } from "../data/Career/Career";
+// import TableComponent from "../shared/CareerTable";
 
-const page = ({ data = careerData }: { data?: PageData }) => {
+// const page = ({ data = careerData }: { data?: PageData }) => {
+//   return (
+//     <div className="p-5 md:p-10 mt-20">
+//       <TopBannerCard
+//         imageSrc={data.banner.image}
+//         title={data.banner.title}
+//         description={data.banner.description}
+//       />
+//       <TableComponent rows={data.rows} />
+//       <div>
+//         <Footer
+//           headings={data.footer.headings}
+//           description={data.footer.description}
+//           gradientIndex={data.footer.gradientIndex}
+//           gradientWordCount={data.footer.gradientWordCount}
+//         />
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default page;
+
+import React from "react";
+import CareerPage from "../pages/Careers/Careers";
+
+export default function Page() {
   return (
     <div className="p-5 md:p-10 mt-20">
-      <TopBannerCard
-        imageSrc={data.banner.image}
-        title={data.banner.title}
-        description={data.banner.description}
-      />
-      <TableComponent rows={data.rows} />
-      <div>
-        <Footer
-          headings={data.footer.headings}
-          description={data.footer.description}
-          gradientIndex={data.footer.gradientIndex}
-          gradientWordCount={data.footer.gradientWordCount}
-        />
-      </div>
+      <CareerPage />
     </div>
   );
-};
-
-export default page;
+}
