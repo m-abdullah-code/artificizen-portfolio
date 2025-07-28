@@ -21,7 +21,7 @@ const TopBannerCard = ({
       {/* Overlay Text */}
       <div className="absolute inset-0 flex flex-col justify-center text-white text-center px-10">
         <h1
-          className="font-bold md:mb-2 text-start"
+          className=" md:mb-2 text-start"
           style={{
             fontSize: "clamp(1.5rem, 5vw, 3.75rem)",
           }}

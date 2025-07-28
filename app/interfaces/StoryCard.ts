@@ -8,7 +8,7 @@ export interface StoryCardProps {
 
 export interface StorySectionData {
   cards: StoryCardProps[];
-  path: string;
+  path?: string;
   title: string;
   subtitle: string;
   starColor: string;
