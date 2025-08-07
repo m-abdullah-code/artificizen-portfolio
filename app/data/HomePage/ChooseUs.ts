@@ -30,6 +30,7 @@ export const chooseUsData: ChooseUsData = {
       },
     ],
     buttonText: "Lets Talk",
+    href: "/contact-us",
   },
   stats: {
     stat1: {
@@ -39,10 +40,10 @@ export const chooseUsData: ChooseUsData = {
         "Achieved a 95% customer satisfaction rate across all AI solutions.",
     },
     stat2: {
-      value: "$10mil",
+      value: "$2mil",
       label: "Cost Savings",
       description:
-        "Delivered over $10 million in cost savings for clients through optimized AI solutions.",
+        "Delivered over $2 million in cost savings for clients through optimized AI solutions.",
     },
   },
 };

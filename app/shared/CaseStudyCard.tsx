@@ -8,20 +8,20 @@ export const CaseStudyCard = ({
   date,
   heading,
   imageSrc,
-  btn1,
-  btn2,
-}: CaseStudyCardProps) => {
+}: // btn1,
+// btn2,
+CaseStudyCardProps) => {
   return (
     <div className="p-3 bg-[#1F1F1F] shadow-md rounded-md">
       {/* Top Section */}
-      <div className="flex justify-between items-end mb-3 px-3">
+      <div className="flex justify-between items-end mb-3">
         <div className="flex gap-2">
-          <button className="bg-transparent border border-2 text-white px-5 p-2 text-sm rounded-full">
+          {/* <button className="bg-transparent border border-2 text-white px-5 p-2 text-sm rounded-full">
             {btn1}
           </button>
           <button className="bg-transparent border border-2 text-white px-5 p-2 text-sm rounded-full">
             {btn2}
-          </button>
+          </button> */}
         </div>
         <div className="bg-[#0B5CFF] text-white text-sm px-2 py-1 rounded">
           {day}

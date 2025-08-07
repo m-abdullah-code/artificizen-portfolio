@@ -3,12 +3,13 @@ import Image from "next/image";
 import Elipse from "../../../../public/assets/Footer/Ellipse 1.png";
 import Alogo from "../../../../public/assets/logo/Artificizen-Logo.png";
 import { MdWhatsapp } from "react-icons/md";
-import { IoCallOutline, IoLogoYoutube } from "react-icons/io5";
+import { IoCallOutline, IoLogoInstagram } from "react-icons/io5";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { footerData } from "../../../data/Footer";
 import { IconKey, FooterData } from "../../../interfaces/Footer";
 import { IconType } from "react-icons";
+import Link from "next/link";
 
 const iconMap: Record<IconKey, IconType> = {
   MdWhatsapp: MdWhatsapp,
@@ -16,7 +17,7 @@ const iconMap: Record<IconKey, IconType> = {
   FaFacebookF: FaFacebookF,
   FaXTwitter: FaXTwitter,
   FaLinkedinIn: FaLinkedinIn,
-  IoLogoYoutube: IoLogoYoutube,
+  IoLogoInstagram: IoLogoInstagram,
 } as const;
 
 interface FooterProps {
@@ -184,12 +185,33 @@ const Footer: React.FC<FooterProps> = ({
               <li className="mt-10">
                 {typedFooterData.location.socialMedia.label}
               </li>
-              <li>
+              {/* <li>
                 <div className="flex items-center gap-6 text-white text-base mt-3">
                   {typedFooterData.location.socialMedia.icons.map(
                     (icon, index) => {
                       const Icon = iconMap[icon];
                       return <Icon key={index} />;
+                    }
+                  )}
+                </div>
+              </li> */}
+
+              <li>
+                <div className="flex items-center gap-6 text-white text-base mt-3">
+                  {typedFooterData.location.socialMedia.icons.map(
+                    (item, index) => {
+                      const Icon = iconMap[item.icon];
+                      return (
+                        <a
+                          key={index}
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:scale-110 transition-transform duration-300"
+                        >
+                          <Icon />
+                        </a>
+                      );
                     }
                   )}
                 </div>
@@ -202,21 +224,35 @@ const Footer: React.FC<FooterProps> = ({
             <h4 className="text-lg font-semibold mb-3">
               {typedFooterData.company.title}
             </h4>
-            <ul className="space-y-2 text-base text-gray-300">
+            <ul className="space-y-2 text-base text-white">
               {typedFooterData.company.links.map((link, index) => (
-                <li key={index}>{link}</li>
+                <li key={index}>
+                  <Link href={link.url}>{link.label}</Link>
+                </li>
               ))}
             </ul>
           </div>
 
           {/* Column 5: Services */}
-          <div>
+          {/* <div>
             <h4 className="text-lg font-semibold mb-3">
               {typedFooterData.services.title}
             </h4>
             <ul className="space-y-2 text-base text-gray-300">
               {typedFooterData.services.links.map((link, index) => (
                 <li key={index}>{link}</li>
+              ))}
+            </ul>
+          </div> */}
+          <div>
+            <h4 className="text-lg font-semibold mb-3 text-white">
+              {typedFooterData.services.title}
+            </h4>
+            <ul className="space-y-2 text-base text-white">
+              {typedFooterData.services.links.map((link, index) => (
+                <li key={index}>
+                  <Link href={link.url}>{link.label}</Link>
+                </li>
               ))}
             </ul>
           </div>

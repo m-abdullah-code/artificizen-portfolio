@@ -12,6 +12,7 @@ export const blogSectionData: BlogSectionData = {
       content: "",
       links: ["AI", "Business"],
       height: "280px",
+      href: "/blog",
     },
     {
       image: Picture2,
@@ -21,6 +22,7 @@ export const blogSectionData: BlogSectionData = {
       content: "",
       links: ["AI", "Business"],
       height: "152px",
+      href: "/blog",
     },
     {
       image: Picture2,
@@ -30,6 +32,7 @@ export const blogSectionData: BlogSectionData = {
       content: "",
       links: ["AI", "Business"],
       height: "152px",
+      href: "/blog",
     },
   ],
   path: "/ blog /",

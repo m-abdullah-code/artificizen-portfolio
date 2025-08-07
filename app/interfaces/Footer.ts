@@ -5,12 +5,17 @@ export type IconKey =
   | "FaFacebookF"
   | "FaXTwitter"
   | "FaLinkedinIn"
-  | "IoLogoYoutube";
+  | "IoLogoInstagram";
 
 // Define the Contact interface
 export interface Contact {
   icon: IconKey;
   value: string;
+}
+
+export interface SocialIcon {
+  icon: IconKey;
+  href: string;
 }
 
 export interface FooterProps {
@@ -53,16 +58,18 @@ export interface FooterData {
     addresses: string[];
     socialMedia: {
       label: string;
-      icons: IconKey[];
+      // icons: IconKey[];
+      icons: SocialIcon[];
     };
   };
   company: {
     title: string;
-    links: string[];
+    links: { label: string; url: string }[];
   };
   services: {
     title: string;
-    links: string[];
+    // links: string[];
+    links: { label: string; url: string }[];
   };
 }
 

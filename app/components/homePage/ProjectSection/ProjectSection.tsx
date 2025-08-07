@@ -14,34 +14,37 @@ const Home = () => {
           We have Shipped
         </p>
       </div>
-      {projectsData.map((project, index) => (
-        <ProjectCard
-          key={index}
-          bgImage={project.bgImage}
-          overlayImage={project.overlayImage}
-          logoImage={project.logoImage}
-          backgroundColor={project.backgroundColor}
-        >
-          <h1
-            className={`text-[clamp(1.125rem, 2.5vw, 1.5rem)] font-bold ${
-              project.backgroundColor === "bg-black"
-                ? "text-white"
-                : "text-gray-800"
-            }`}
+      <div className="cursor-pointer">
+        {projectsData.map((project, index) => (
+          <ProjectCard
+            key={index}
+            bgImage={project.bgImage}
+            overlayImage={project.overlayImage}
+            logoImage={project.logoImage}
+            backgroundColor={project.backgroundColor}
+             href={project.href}
           >
-            {project.title}
-          </h1>
-          <p
-            className={`text-base ${
-              project.backgroundColor === "bg-black"
-                ? "text-white"
-                : "text-gray-600"
-            } mt-4`}
-          >
-            {project.description}
-          </p>
-        </ProjectCard>
-      ))}
+            <h1
+              className={`text-[clamp(1.125rem, 2.5vw, 1.5rem)] font-bold ${
+                project.backgroundColor === "bg-black"
+                  ? "text-white"
+                  : "text-gray-800"
+              }`}
+            >
+              {project.title}
+            </h1>
+            <p
+              className={`text-base ${
+                project.backgroundColor === "bg-black"
+                  ? "text-white"
+                  : "text-gray-600"
+              } mt-4`}
+            >
+              {project.description}
+            </p>
+          </ProjectCard>
+        ))}
+      </div>
     </>
   );
 };

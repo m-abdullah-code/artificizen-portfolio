@@ -1,4 +1,4 @@
-import { FooterData } from "../interfaces/Footer"; 
+import { FooterData } from "../interfaces/Footer";
 
 export const footerData: FooterData = {
   getInTouch: {
@@ -30,37 +30,77 @@ export const footerData: FooterData = {
       "Artificizen builds smart, scalable AI solutions that turn bold ideas into real-world impact.",
   },
   callCenter: {
-    title: "Call Center",
+    title: "Contact Us",
     contacts: [
-      { icon: "MdWhatsapp" as const, value: "+92 300 1234567" },
-      { icon: "IoCallOutline" as const, value: "+92 300 1234567" },
+      { icon: "MdWhatsapp" as const, value: "+92 300 4985797" },
+      { icon: "IoCallOutline" as const, value: "+92 328 7218978" },
     ],
     email: {
       label: "Email",
-      value: "support@yourcompany.com",
+      value: "info@artificizen.com",
     },
   },
   location: {
     title: "Our Location",
-    addresses: ["USA, New York - 1060", "Str. First Avenue 1"],
+    addresses: [
+      "Office 1: 30 N Gould St, Ste R Sheridan, WY 82801 , USA",
+      "Office 2: Plot 341 B2, Johar Town Lahore, Pakistan",
+    ],
+    // socialMedia: {
+    //   label: "Social network",
+    //   icons: [
+    //     "FaLinkedinIn",
+    //     "FaFacebookF",
+    //     "IoLogoInstagram",
+    //     "FaXTwitter",
+    //   ] as const,
+    // },
     socialMedia: {
       label: "Social network",
-      icons: ["FaFacebookF", "FaXTwitter", "FaLinkedinIn", "IoLogoYoutube"] as const,
+      icons: [
+        {
+          icon: "FaLinkedinIn",
+          href: "https://www.linkedin.com/company/102894444",
+        },
+        { icon: "FaFacebookF", href: "https://web.facebook.com/artificizen" },
+        {
+          icon: "IoLogoInstagram",
+          href: "https://www.instagram.com/artificizen/",
+        },
+        { icon: "FaXTwitter", href: "https://twitter.com/artificizen" },
+      ] as const,
     },
   },
   company: {
     title: "Company",
-    links: ["About", "Expertise", "Sustainability", "News&Media", "Term", "Contact"],
+    links: [
+      { label: "About", url: "about-us" },
+      { label: "Blog", url: "/blog" },
+      { label: "Case Study", url: "/case-study" },
+      { label: "Career", url: "/career" },
+      { label: "Conatct", url: "contact-us" },
+    ],
   },
+  // services: {
+  //   title: "Services",
+  //   links: [
+  //     "AI Chatbots",
+  //     "AI SaaS Development",
+  //     "POC /MVP Development",
+  //     "Enterprise AI Automation",
+  //     "Cloud Infrastructure",
+  //     "Other Services",
+  //   ],
+  // },
   services: {
     title: "Services",
     links: [
-      "AI Chatbots",
-      "AI SaaS Development",
-      "POC /MVP Development",
-      "Enterprise AI Automation",
-      "Cloud Infrastructure",
-      "Other Services",
+      { label: "AI Chatbots", url: "/services/chatbot-solutions" },
+      { label: "AI SaaS Development", url: "/services/saas-development" },
+      { label: "POC /MVP Development", url: "/services/poc-mvp-development" },
+      { label: "Enterprise AI Automation", url: "/services/ai-automation" },
+      { label: "Cloud Infrastructure", url: "/services/cloud-infrastructure" },
+      { label: "Other Services", url: "/services/other" },
     ],
   },
 };

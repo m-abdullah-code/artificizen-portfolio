@@ -26,7 +26,7 @@ const TableComponent: React.FC<TableComponentProps> = ({ rows }) => {
 
           {/* Column 2 */}
           <div>
-            <h3 className="text-[clamp(1.5rem,2vw,2rem)] leading-tight mb-2">
+            <h3 className="text-[clamp(1.5rem,2vw,2rem)] leading-tight mb-5">
               {row.col2Heading}
             </h3>
             <p className="text-base text-black">{row.col2Text}</p>

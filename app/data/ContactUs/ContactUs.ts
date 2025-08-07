@@ -14,18 +14,21 @@ export const contactUsData: ContactUsPageData = {
     topText: "/get in touch /",
     headings: ["We are always ready to help you and answer your questions"],
     description:
-      "Pacific hake false trevally queen parrotfish black prickleback mosshead warbonnet sweeper! Greenling sleeper.",
+      "Let’s collaborate to bring your AI vision to life with speed and precision.",
     contactInfo: {
       callCenter: {
-        title: "Call Center",
+        title: "Contact Us",
         phone: [
-          { icon: "IoCallOutline", number: "+92328-7218978" },
-          { icon: "MdWhatsapp", number: "+1 (530) 220-7680" },
+          { icon: "IoCallOutline", number: "+92 300 4985797" },
+          { icon: "MdWhatsapp", number: "+92 328 7218978" },
         ],
       },
       location: {
         title: "Our Location",
-        address: "USA, New York – 1060 Str. First Avenue 1",
+        addresses: [
+          "Office 1: 30 N Gould St, Ste R Sheridan, WY 82801 , USA",
+          "Office 2: Plot 341 B2, Johar Town Lahore, Pakistan",
+        ],
       },
     },
     emailAndSocials: {
@@ -35,12 +38,24 @@ export const contactUsData: ContactUsPageData = {
       },
       socials: {
         title: "Social Network",
+        // networks: [
+        //   { name: "FaFacebookF" },
+        //   { name: "FaLinkedinIn" },
+        //   { name: "FaXTwitter" },
+        //   { name: "FaYoutube" },
+        // ],
         networks: [
-          { name: "FaFacebookF" },
-          { name: "FaLinkedinIn" },
-          { name: "FaXTwitter" },
-          { name: "FaYoutube" },
-        ],
+          {
+            name: "FaLinkedinIn",
+            href: "https://www.linkedin.com/company/102894444",
+          },
+          { name: "FaFacebookF", href: "https://web.facebook.com/artificizen" },
+          {
+            name: "IoLogoInstagram",
+            href: "https://www.instagram.com/artificizen/",
+          },
+          { name: "FaXTwitter", href: "https://twitter.com/artificizen" },
+        ] as const,
       },
     },
   },
@@ -56,43 +71,60 @@ export const contactUsData: ContactUsPageData = {
     description:
       "Artificizen builds smart, scalable AI solutions that turn bold ideas into real-world impact.",
     callCenter: {
-      title: "Call Center",
+      title: "Contact Us",
       contacts: [
-        { type: "MdWhatsapp", value: "+1 (530) 220-7680" },
-        { type: "IoCallOutline", value: "+92328-7218978" },
+        { type: "MdWhatsapp", value: "+92 300 4985797" },
+        { type: "IoCallOutline", value: "+92 328 7218978" },
         { type: "Email", value: "info@artificizen.com" },
       ],
     },
     location: {
       title: "Location",
-      address: "USA, New York - 1060 Str. First Avenue 1",
-      socials: [
-        { name: "FaFacebookF" },
-        { name: "FaXTwitter" },
-        { name: "FaLinkedinIn" },
-        { name: "IoLogoYoutube" },
+      addresses: [
+        "Office 1: 30 N Gould St, Ste R Sheridan, WY 82801 , USA",
+        "Office 2: Plot 341 B2, Johar Town Lahore, Pakistan",
       ],
+      // socials: [
+      //   { name: "FaFacebookF" },
+      //   { name: "FaXTwitter" },
+      //   { name: "FaLinkedinIn" },
+      //   { name: "IoLogoYoutube" },
+      // ],
+      socials: [
+        {
+          name: "FaLinkedinIn",
+          href: "https://www.linkedin.com/company/102894444",
+        },
+        { name: "FaFacebookF", href: "https://web.facebook.com/artificizen" },
+        {
+          name: "IoLogoInstagram",
+          href: "https://www.instagram.com/artificizen/",
+        },
+        { name: "FaXTwitter", href: "https://twitter.com/artificizen" },
+      ] as const,
     },
     company: {
       title: "Company",
       items: [
-        "About",
-        "Expertise",
-        "Sustainability",
-        "News & Media",
-        "Team",
-        "Contacts",
+        { label: "About", url: "about-us" },
+        { label: "Blog", url: "/blog" },
+        { label: "Case Study", url: "/case-study" },
+        { label: "Career", url: "/career" },
+        { label: "Conatct", url: "contact-us" },
       ],
     },
     services: {
       title: "Services",
       items: [
-        "AI Chatbots",
-        "AI SaaS Development",
-        "POC/MVP Development",
-        "Enterprise AI Automation",
-        "Cloud Infrastructure",
-        "Other Services",
+        { label: "AI Chatbots", url: "/services/chatbot-solutions" },
+        { label: "AI SaaS Development", url: "/services/saas-development" },
+        { label: "POC/MVP Development", url: "/services/poc-mvp-development" },
+        { label: "Enterprise AI Automation", url: "/services/ai-automation" },
+        {
+          label: "Cloud Infrastructure",
+          url: "/services/cloud-infrastructure",
+        },
+        { label: "Other Services", url: "" },
       ],
     },
     backgroundImage: Elipse,

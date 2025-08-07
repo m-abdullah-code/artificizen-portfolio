@@ -100,7 +100,7 @@ export const caseStudiesData: CaseStudiesData = {
     ],
   },
   impactResults: {
-    title: "Impact&Results",
+    title: "Impact & Results",
     text: "After implementing MediMatch, the healthcare network saw a 34% reduction in appointment no-shows, 28% decrease in scheduling staff workload, and 42% improvement in provider utilization rates. Patient satisfaction scores related to appointment scheduling increased by 67%, and the average time to secure an appointment decreased from 13 days to 4 days. The system now processes over 25,000 appointments monthly with 99.7% accuracy in matching patients to appropriate specialists.",
   },
   whyItMatters: {

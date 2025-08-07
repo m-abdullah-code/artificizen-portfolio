@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import { CardData } from "../interfaces/CardWithContent";
+import Link from "next/link";
 
 const CardWithContent = ({
   topText,
   heading,
+  href,
   content,
   image,
   buttonText,
@@ -74,9 +76,11 @@ const CardWithContent = ({
           </div>
           {buttonText && (
             <div>
-              <button className="text-sm w-[190px] px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
-                {buttonText}
-              </button>
+              <Link href={href}>
+                <button className="text-sm w-[190px] px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors cursor-pointer">
+                  {buttonText}
+                </button>
+              </Link>
             </div>
           )}
         </div>

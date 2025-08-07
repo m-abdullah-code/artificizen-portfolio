@@ -8,7 +8,7 @@ export interface ContactInfo {
   };
   location: {
     title: string;
-    address: string;
+    addresses: string[];
   };
 }
 
@@ -20,14 +20,14 @@ export interface EmailAndSocials {
   };
   socials: {
     title: string;
-    networks: { name: string }[];
+    networks: { name: string; href: string }[];
   };
 }
 
 // Interface for footer column
 export interface FooterColumn {
   title: string;
-  items: string[];
+  items: { label: string; url: string }[];
 }
 
 // Interface for footer data
@@ -40,8 +40,8 @@ export interface FooterData {
   };
   location: {
     title: string;
-    address: string;
-    socials: { name: string }[];
+    addresses: string[];
+    socials: { name: string; href: string }[];
   };
   company: FooterColumn;
   services: FooterColumn;

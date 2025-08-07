@@ -10,7 +10,7 @@ export const serviceData: ServicesPageData = {
   banner: {
     image: Banner,
     heading: "AI Saas Development",
-    content: "Powerful ai solutions tailored to transform your business",
+    content: "Powerful AI solutions tailored to transform your business",
   },
   sidebarCards: [
     {
@@ -66,7 +66,7 @@ export const serviceData: ServicesPageData = {
   ],
   mainSection: {
     heading: "Innovation Through AI",
-    subheading: "Powering Buisness",
+    subheading: "Powering Business",
     content:
       "In today's competitive business landscape, AI-powered Software-as-a-Service (SaaS) solutions are revolutionizing how companies operate, analyze data, and make decisions. Artificizen specializes in developing scalable, intelligent SaaS platforms that transform business capabilities through advanced artificial intelligence.",
     image: Main,
@@ -105,7 +105,7 @@ export const serviceData: ServicesPageData = {
     },
     applications: {
       title: "Applications",
-      subheading: "Buisness ",
+      subheading: "Business ",
       bulletPoints: [
         {
           title: "Predictive Analytics: ",
@@ -172,31 +172,46 @@ export const serviceData: ServicesPageData = {
       title: "Pioneering Projects For Intelligent Solutions",
       subheading: "/ projects /",
       metric: {
-        value: "350",
+        value: "110",
         label: "Completed projects",
       },
       projectBoxes: [
         {
-          title: "DeepVision: Enhancing image recognition with Neural Networks",
+          title: [
+            { label: "Case Studies", href: "/case-study" },
+            {
+              label: "Agent Forge",
+              href: "/case-studies/agentforge",
+            },
+            { label: "Empathica", href: "/case-studies/empathica" },
+          ],
           content: "",
         },
         {
-          title: "DeepVision: Enhancing image recognition with Neural Networks",
+          title: [
+            { label: "Medi Match", href: "/case-studies/medimatch" },
+            { label: "Exec Suite", href: "/case-studies/execsuite" },
+            {
+              label: "Vocal Persona",
+              href: "/case-studies/vocalpersona",
+            },
+          ],
           content: "",
         },
       ],
       buttons: [
         {
+          text: "Explore more",
+          className:
+            "mt-10 rounded-full p-2 px-5 border border-white flex items-center gap-2 cursor-pointer",
+          icon: Right,
+          link: "/blog",
+        },
+        {
           text: "",
           className:
             "border border-white rounded-full p-2 px-5 mt-10 flex items-center gap-2",
           icon: Left,
-        },
-        {
-          text: "Explore more",
-          className:
-            "mt-10 rounded-full p-2 px-5 border border-white flex items-center gap-2",
-          icon: Right,
         },
       ],
     },
@@ -231,7 +246,7 @@ export const serviceData: ServicesPageData = {
       ],
     },
     partnership: {
-      title: "Elevate Your Buisness Capabilities",
+      title: "Elevate Your Business Capabilities",
       content: [
         "Partner with Artificizen to develop AI SaaS solutions that provide lasting competitive advantage. Our expertise helps you move beyond generic AI applications to create proprietary systems that unlock new business value and transform your market position.",
         " Contact us today to discuss how our AI SaaS development services can accelerate your business transformation. ",
@@ -242,7 +257,7 @@ export const serviceData: ServicesPageData = {
   footer: {
     headings: ["We are always ready to help you and answere your questions"],
     description:
-      "Pacific hake false trevally queen parrotfish black prickleback mosshead warbonnet sweeper! Greenling sleeper.",
+      "Let’s collaborate to bring your AI vision to life with speed and precision.",
     gradientIndex: 0,
     gradientWordCount: 2,
   },

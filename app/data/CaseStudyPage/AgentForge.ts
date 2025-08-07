@@ -101,7 +101,7 @@ export const caseStudiesData: CaseStudiesData = {
     ],
   },
   impactResults: {
-    title: "Impact&Results",
+    title: "Impact & Results",
     text: "In the first month, AgentForge has attracted over 600 developers who have published more than 200 unique agents. Enterprise clients report average productivity gains of 32% in workflows where custom agents have been deployed. The agent development time has decreased by 78% compared to traditional custom AI solution implementations.",
   },
   whyItMatters: {

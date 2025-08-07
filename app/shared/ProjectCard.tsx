@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { ProjectCardProps } from "../interfaces/ProjectCard";
+import Link from "next/link";
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   bgImage,
@@ -8,8 +9,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   logoImage,
   children,
   backgroundColor = "bg-gray-200",
+  href,
 }) => {
-  return (
+  const cardContent = (
     <div className="relative w-full overflow-hidden mb-10 lg:h-[550px]">
       <div
         className={`rounded-3xl flex flex-col md:flex-row justify-between items-center relative z-10 ${backgroundColor}`}
@@ -51,6 +53,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
     </div>
   );
+  return href ? <Link href={href}>{cardContent}</Link> : cardContent;
 };
 
 export default ProjectCard;

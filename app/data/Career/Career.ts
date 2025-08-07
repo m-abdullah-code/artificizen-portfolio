@@ -6,7 +6,7 @@ export const careerData: PageData = {
   banner: {
     image: Career,
     title: "Careers",
-    description: "Powerful ai solutions tailored to transform your business",
+    description: "Powerful AI solutions tailored to transform your business",
   },
   rows: [
     {
@@ -15,12 +15,12 @@ export const careerData: PageData = {
       col1Heading: "Onsite",
       col2Heading: "AI Research Scientist",
       col2Text:
-        "Conducting cutting-edge research in AI, developing new algorithms, and pushing the boundaries of AI capabilities.",
+        "Conducting cutting-edge research in AI, developing new algorithms, and pushing the boundaries of AI capabilities. ",
     },
     {
       button1: "full time",
       button2: "senior",
-      col1Heading: "First Column Heading 2",
+      col1Heading: "Onsite",
       col2Heading: "AI Research Scientist",
       col2Text:
         "Conducting cutting-edge research in AI, developing new algorithms, and pushing the boundaries of AI capabilities.",
@@ -53,7 +53,7 @@ export const careerData: PageData = {
   footer: {
     headings: ["We are always ready to help you and answer your questions"],
     description:
-      "Pacific hake false trevally queen parrotfish black prickleback mosshead warbonnet sweeper! Greenling sleeper.",
+      "Let’s collaborate to bring your AI vision to life with speed and precision.",
     gradientIndex: 0,
     gradientWordCount: 2,
   },

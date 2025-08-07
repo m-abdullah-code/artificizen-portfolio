@@ -12,6 +12,7 @@ export interface ChooseUsData {
       content: string;
     }[];
     buttonText: string;
+    href: string;
   };
   stats: {
     stat1: {

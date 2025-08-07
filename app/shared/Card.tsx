@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Card = ({ heading, content, image }: CardData) => {
   return (
-    <div className=" bg-white rounded-xl shadow-md md:max-w-4xl relative overflow-hidden">
+    <div className=" bg-white rounded-xl shadow-md md:max-w-4xl relative overflow-hidden h-68">
       <div className="md:flex">
         <div className="p-6">
           <h2 className="text-xl font-semibold text-[#111111] mb-2">

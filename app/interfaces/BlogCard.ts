@@ -7,6 +7,7 @@ export interface BlogCardProps {
   content: string;
   links: string[];
   height?: string;
+  href: string;
 }
 
 export interface BlogSectionData {

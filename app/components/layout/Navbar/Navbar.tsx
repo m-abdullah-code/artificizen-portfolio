@@ -22,6 +22,8 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const isHomePage = pathname === "/";
+
   const navVariants = {
     transparent: {
       backgroundColor: "rgba(255, 255, 255, 0)",
@@ -168,7 +170,7 @@ export default function Navigation() {
           {/* CTA Button and Mobile Menu */}
           <div className="flex items-center space-x-4">
             <Link
-              href="/contact"
+              href="/contact-us"
               className="hidden md:flex items-center justify-center px-6 py-2 rounded-full relative overflow-hidden group border-2 border-transparent bg-gradient-to-r from-[#0B5CFF99] to-[#FF710C] bg-clip-border"
               style={{
                 background: `linear-gradient(${
@@ -191,6 +193,28 @@ export default function Navigation() {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`
+    lg:hidden p-2 rounded-md transition-colors
+    ${isScrolled ? "hover:bg-muted" : "hover:bg-white/10"}
+  `}
+            >
+              {isMobileMenuOpen ? (
+                <HiX
+                  className={`w-6 h-6 ${
+                    isScrolled && isHomePage ? "text-black" : "text-white"
+                  }`}
+                />
+              ) : (
+                <HiMenu
+                  className={`w-6 h-6 ${
+                    isScrolled && isHomePage ? "text-black" : "text-white"
+                  }`}
+                />
+              )}
+            </button>
+
+            {/* <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className={`
                 lg:hidden p-2 rounded-md transition-colors
                 ${isScrolled ? "hover:bg-muted" : "hover:bg-white/10"}
               `}
@@ -200,7 +224,7 @@ export default function Navigation() {
               ) : (
                 <HiMenu className="w-6 h-6 text-white" />
               )}
-            </button>
+            </button> */}
           </div>
         </div>
 
@@ -246,7 +270,7 @@ export default function Navigation() {
                 {/* Mobile CTA */}
                 <div className="px-4 pt-4 ">
                   <Link
-                    href="/contact"
+                    href="/contact-us"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block w-full text-center px-6 py-3 bg-gradient-to-r from-[#0B5CFF99] to-[#FF710C] text-white rounded-full font-medium text-sm hover:opacity-90 transition-all duration-300 relative overflow-hidden group"
                   >

@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "@/app/shared/Card";
 import { SectionData } from "@/app/interfaces/Card";
+import Link from "next/link";
 
 const ServicesSection = ({ data }: { data: SectionData }) => {
   return (
@@ -14,7 +15,7 @@ const ServicesSection = ({ data }: { data: SectionData }) => {
           {data.title}
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
         {data.cards.map((card, index) => (
           <Card
             key={index}
@@ -23,6 +24,26 @@ const ServicesSection = ({ data }: { data: SectionData }) => {
             image={card.image}
           />
         ))}
+      </div> */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
+        {data.cards.map((card, index) =>
+          card.href ? (
+            <Link key={index} href={card.href}>
+              <Card
+                heading={card.heading}
+                content={card.content}
+                image={card.image}
+              />
+            </Link>
+          ) : (
+            <Card
+              key={index}
+              heading={card.heading}
+              content={card.content}
+              image={card.image}
+            />
+          )
+        )}
       </div>
     </div>
   );

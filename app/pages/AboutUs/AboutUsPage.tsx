@@ -62,6 +62,7 @@ const AboutUsPage = () => {
           imagePosition={aboutUsData.cards[0].imagePosition}
           lineIndex={aboutUsData.cards[0].lineIndex}
           wordCount={aboutUsData.cards[0].wordCount}
+          href=""
         />
       </div>
 
@@ -85,6 +86,7 @@ const AboutUsPage = () => {
           imagePosition={aboutUsData.cards[1].imagePosition}
           lineIndex={aboutUsData.cards[1].lineIndex}
           wordCount={aboutUsData.cards[1].wordCount}
+          href=""
         />
       </div>
 

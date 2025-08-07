@@ -19,7 +19,7 @@ export const caseStudyData: CaseStudyData = {
   topBanner: {
     imageSrc: CaseStudy,
     title: "Case Studies",
-    description: "Powerful ai solutions tailored to transform your business",
+    description: "Powerful AI solutions tailored to transform your business",
   },
   cards: [
     {
@@ -74,7 +74,7 @@ export const caseStudyData: CaseStudyData = {
   footer: {
     headings: ["We are always ready to help you and answere your questions"],
     description:
-      "Pacific hake false trevally queen parrotfish black prickleback mosshead warbonnet sweeper! Greenling sleeper.",
+      "Let’s collaborate to bring your AI vision to life with speed and precision.",
     gradientIndex: 0,
     gradientWordCount: 2,
   },

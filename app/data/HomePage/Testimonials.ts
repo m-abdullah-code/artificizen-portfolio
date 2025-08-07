@@ -10,7 +10,7 @@ export const carouselData: CarouselData = {
     label: "/ testimonials /",
     heading: "Hear What Winning Team Says About Us.",
     stat: {
-      value: "60+",
+      value: "60",
       label: "Happy Clients",
     },
   },

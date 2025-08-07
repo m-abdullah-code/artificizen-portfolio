@@ -54,14 +54,23 @@ export interface ServicesPageData {
         value: string;
         label: string;
       };
+      // projectBoxes: {
+      //   title: string;
+      //   content: string;
+      // }[];
       projectBoxes: {
-        title: string;
+        title: {
+          label: string;
+          href: string;
+        }[];
         content: string;
       }[];
+
       buttons: {
         text: string;
         className: string;
         icon?: StaticImageData;
+        link?: string;
       }[];
     };
     process: {

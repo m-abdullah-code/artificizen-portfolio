@@ -14,6 +14,7 @@ export const blogSectionData: BlogSectionData = {
         "Yes, AI solutions are becoming increasingly accessible to businesses . Yes, AI solutions are becoming increasingly accessible to businesses . Yes, AI solutions are becoming increasingly accessible to businesses",
       links: ["AI", "Business"],
       height: "280px",
+      href: "",
     },
     {
       image: Machine,
@@ -23,6 +24,7 @@ export const blogSectionData: BlogSectionData = {
       content: "",
       links: ["AI", "Business"],
       height: "152px",
+      href: "",
     },
     {
       image: Tower,
@@ -32,6 +34,7 @@ export const blogSectionData: BlogSectionData = {
       content: "",
       links: ["AI", "Business"],
       height: "152px",
+      href: "",
     },
   ],
   path: "/ blog /",

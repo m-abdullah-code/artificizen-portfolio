@@ -6,6 +6,7 @@ export interface CardData {
   content: string[];
   image: StaticImageData;
   buttonText?: string;
+  href: string;
   imagePosition?: "left" | "right";
   lineIndex?: number;
   wordCount?: number;

@@ -12,6 +12,7 @@ export const cardData: CardData[] = [
       " Need to know more?",
     ],
     image: Buisness,
+    href: "/about-us",
     buttonText: "Explore our story",
     imagePosition: "left",
     lineIndex: 0,

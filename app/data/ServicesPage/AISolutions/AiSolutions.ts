@@ -10,7 +10,7 @@ export const serviceData: ServicesCardData = {
   footer: {
     headings: ["We are always ready to help you and answer your questions"],
     description:
-      "Pacific hake false trevally queen parrotfish black prickleback mosshead warbonnet sweeper! Greenling sleeper.",
+      "Let’s collaborate to bring your AI vision to life with speed and precision.",
     gradientIndex: 0,
     gradientWordCount: 2,
   },

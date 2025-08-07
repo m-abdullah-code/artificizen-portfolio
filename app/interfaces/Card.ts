@@ -4,6 +4,7 @@ export interface CardData {
   heading: string;
   content: string;
   image?: StaticImageData;
+  href?: string;
 }
 
 export interface SectionData {
@@ -11,4 +12,5 @@ export interface SectionData {
   title: string;
   subtitle: string;
   path: string;
+  // href?: string;
 }

@@ -36,7 +36,7 @@ const HomePage = () => {
             "A Challenge?",
             "Or Just Curious",
             "About What AI Can",
-            "Do For Your Buisness?",
+            "Do For Your Business?",
           ]}
           description="Let’s collaborate to bring your AI vision to life with speed and precision."
           gradientIndex={0}

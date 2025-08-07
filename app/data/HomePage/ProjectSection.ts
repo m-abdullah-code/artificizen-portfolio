@@ -9,7 +9,6 @@ import Upper3 from "../../../public/assets/ProjectCard/upper2.png";
 import Background3 from "../../../public/assets/ProjectCard/background3.png";
 import { ProjectData } from "@/app/interfaces/ProjectCard";
 
-
 export const projectsData: ProjectData[] = [
   {
     title: "Agentic AI Marketplace",
@@ -18,6 +17,7 @@ export const projectsData: ProjectData[] = [
     bgImage: Ball,
     overlayImage: Image,
     logoImage: Icon,
+    href: "/case-studies/agentforge",
   },
   {
     title: "AI Cold Calling+Appointment Booking",
@@ -26,6 +26,7 @@ export const projectsData: ProjectData[] = [
     bgImage: Background,
     overlayImage: Cover2,
     logoImage: Icon1,
+    href: "/case-studies/medimatch",
   },
   {
     title: "Real Human Avatar for Therapy",
@@ -35,5 +36,6 @@ export const projectsData: ProjectData[] = [
     overlayImage: Upper3,
     logoImage: Icon3,
     backgroundColor: "bg-black",
+    href: "/case-studies/empathica",
   },
 ];

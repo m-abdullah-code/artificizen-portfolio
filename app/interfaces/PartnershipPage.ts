@@ -53,6 +53,7 @@ export interface ActionButton {
   text: string;
   icon: StaticImageData;
   alt: string;
+  link?: string;
 }
 
 // Main data structure

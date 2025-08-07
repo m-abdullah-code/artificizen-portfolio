@@ -102,7 +102,7 @@ export const caseStudiesData: CaseStudiesData = {
     ],
   },
   impactResults: {
-    title: "Impact&Results",
+    title: "Impact & Results",
     text: "Clinical trials demonstrated that Empathica users experienced a 42% reduction in anxiety symptoms and a 38% reduction in depressive symptoms after 12 weeks of regular engagement. The solution has supported over 10,000 users to date, with 87% reporting improved access to mental health support and 79% noting they felt comfortable discussing sensitive issues with the AI therapist. The healthcare provider has reduced wait times for specialized therapy by 64% and expanded their mental health service capacity by 215%.",
   },
   whyItMatters: {

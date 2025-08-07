@@ -10,7 +10,7 @@ export const serviceData: ServicesPageData = {
   banner: {
     image: Banner,
     heading: "Enterprise AI Automation",
-    content: "Powerful ai solutions tailored to transform your business",
+    content: "Powerful AI solutions tailored to transform your business",
   },
   sidebarCards: [
     {
@@ -66,7 +66,7 @@ export const serviceData: ServicesPageData = {
   ],
   mainSection: {
     heading: "Operations Through Intelligent Automation",
-    subheading: "Transforming Buisness ",
+    subheading: "Transforming Business ",
     content:
       "In today's competitive business environment, enterprises are seeking new ways to enhance productivity, improve decision-making, and reduce operational costs. Artificizen's Enterprise AI Automation solutions combine advanced artificial intelligence with robotic process automation to transform routine workflows into intelligent, self-optimizing systems.",
     image: Main,
@@ -105,7 +105,7 @@ export const serviceData: ServicesPageData = {
     },
     applications: {
       title: "Areas",
-      subheading: "Buisness Imact ",
+      subheading: "Business Imact ",
       bulletPoints: [
         {
           title: "Financial Operations: ",
@@ -175,31 +175,46 @@ export const serviceData: ServicesPageData = {
       title: "Pioneering Projects For Intelligent Solutions",
       subheading: "/ projects /",
       metric: {
-        value: "350",
+        value: "110",
         label: "Completed projects",
       },
       projectBoxes: [
         {
-          title: "DeepVision: Enhancing image recognition with Neural Networks",
+          title: [
+            { label: "Case Studies", href: "/case-study" },
+            {
+              label: "Agent Forge",
+              href: "/case-studies/agentforge",
+            },
+            { label: "Empathica", href: "/case-studies/empathica" },
+          ],
           content: "",
         },
         {
-          title: "DeepVision: Enhancing image recognition with Neural Networks",
+          title: [
+            { label: "Medi Match", href: "/case-studies/medimatch" },
+            { label: "Exec Suite", href: "/case-studies/execsuite" },
+            {
+              label: "Vocal Persona",
+              href: "/case-studies/vocalpersona",
+            },
+          ],
           content: "",
         },
       ],
       buttons: [
         {
+          text: "Explore more",
+          className:
+            "mt-10 rounded-full p-2 px-5 border border-white flex items-center gap-2 cursor-pointer",
+          icon: Right,
+          link: "/blog",
+        },
+        {
           text: "",
           className:
             "border border-white rounded-full p-2 px-5 mt-10 flex items-center gap-2",
           icon: Left,
-        },
-        {
-          text: "Explore more",
-          className:
-            "mt-10 rounded-full p-2 px-5 border border-white flex items-center gap-2",
-          icon: Right,
         },
       ],
     },
@@ -245,7 +260,7 @@ export const serviceData: ServicesPageData = {
   footer: {
     headings: ["We are always ready to help you and answere your questions"],
     description:
-      "Pacific hake false trevally queen parrotfish black prickleback mosshead warbonnet sweeper! Greenling sleeper.",
+      "Let’s collaborate to bring your AI vision to life with speed and precision.",
     gradientIndex: 0,
     gradientWordCount: 2,
   },

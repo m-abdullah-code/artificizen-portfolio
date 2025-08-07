@@ -51,7 +51,7 @@ export const bycData: BYCPageData = {
       },
       {
         number: "05",
-        title: "Income -3% Forever",
+        title: "Income 3% Forever",
         desc: "Once the client signs, we begin the journey—turning their idea into reality through our expert development, design, and AI implementation processes. You can track progress through your partner dashboard.",
       },
     ],
@@ -205,9 +205,19 @@ export const bycData: BYCPageData = {
     content:
       "Join the BYC Partner Program today and start building a future where your connections reward you for life. Lets grow together—because we rise by lifting others.",
     buttons: [
-      { text: "Apply Now", icon: WhiteIcon, alt: "User" },
-      { text: "Schedule a Partnership Call", icon: WhiteIcon, alt: "Like" },
-      { text: "Download Partner Guide", icon: WhiteIcon, alt: "Share" },
+      { text: "Apply Now", icon: WhiteIcon, alt: "User", link: "/form" },
+      {
+        text: "Schedule a Partnership Call",
+        icon: WhiteIcon,
+        alt: "Like",
+        link: "/contact-us",
+      },
+      {
+        text: "Download Partner Guide",
+        icon: WhiteIcon,
+        alt: "Share",
+        link: "",
+      },
     ],
     decorImage: Group,
   },
@@ -217,7 +227,7 @@ export const bycData: BYCPageData = {
       "A Challenge?",
       "Or Just Curious",
       "About What AI Can",
-      "Do For Your Buisness?",
+      "Do For Your Business?",
     ],
     description:
       "Let’s collaborate to bring your AI vision to life with speed and precision.",

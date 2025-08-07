@@ -14,7 +14,7 @@ export const blogData: BlogPageData = {
   banner: {
     image: Background,
     title: "Blogs",
-    description: "Powerful ai solutions tailored to transform your business",
+    description: "Powerful AI solutions tailored to transform your business",
   },
   blogTags: [
     "/ AI /",
@@ -28,7 +28,8 @@ export const blogData: BlogPageData = {
   blogPosts: [
     {
       date: "19 Feb, 2024",
-      title: "How can I get started with Artificial Intelligence for my business?",
+      title:
+        "How can I get started with Artificial Intelligence for my business?",
       image: S1,
     },
     {
@@ -53,10 +54,11 @@ export const blogData: BlogPageData = {
     {
       id: 1,
       image: B1,
-      heading: "How can I get started with Artificial Intelligence for my business?",
+      heading:
+        "How can I get started with Artificial Intelligence for my business?",
       content:
         "In today’s fast-paced and data-driven world, businesses are constantly seeking innovative ways to gain a competitive edge, make smarter decisions, and deliver exceptional customer experiences. One technology that",
-      footer: " / AI / Buisness /",
+      footer: " / AI / Business /",
     },
     {
       id: 2,
@@ -69,18 +71,20 @@ export const blogData: BlogPageData = {
     {
       id: 3,
       image: B3,
-      heading: "Exploring Deep Learning: Unleashing the Power of Neural Networks",
+      heading:
+        "Exploring Deep Learning: Unleashing the Power of Neural Networks",
       content:
         "In today’s fast-paced and data-driven world, businesses are constantly seeking innovative ways to gain a competitive edge, make smarter decisions, and deliver exceptional customer experiences. One technology that",
-      footer: " / Buisness / Technology /",
+      footer: " / Business / Technology /",
     },
     {
       id: 4,
       image: B4,
-      heading: "How Natural Language Processing is revolutionizing Text Analysis",
+      heading:
+        "How Natural Language Processing is revolutionizing Text Analysis",
       content:
         "In today’s fast-paced and data-driven world, businesses are constantly seeking innovative ways to gain a competitive edge, make smarter decisions, and deliver exceptional customer experiences. One technology that",
-      footer: " / AI / Buisness /",
+      footer: " / AI / Business /",
     },
   ],
   sideCard: {
@@ -91,7 +95,7 @@ export const blogData: BlogPageData = {
   footer: {
     headings: ["We are always ready to help you and answer your questions"],
     description:
-      "Pacific hake false trevally queen parrotfish black prickleback mosshead warbonnet sweeper! Greenling sleeper.",
+      "Let’s collaborate to bring your AI vision to life with speed and precision.",
     gradientIndex: 0,
     gradientWordCount: 2,
   },

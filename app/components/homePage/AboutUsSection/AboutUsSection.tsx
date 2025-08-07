@@ -14,6 +14,7 @@ const AboutUsSection = () => {
             content={card.content}
             image={card.image}
             buttonText={card.buttonText}
+            href={card.href}
             imagePosition={card.imagePosition}
             lineIndex={card.lineIndex}
             wordCount={card.wordCount}

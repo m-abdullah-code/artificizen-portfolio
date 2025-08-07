@@ -14,7 +14,7 @@ export const blogDetailsData: BlogDetailsPageData = {
   banner: {
     image: Background,
     title: "Blogs Detail",
-    description: "Powerful ai solutions tailored to transform your business",
+    description: "Powerful AI solutions tailored to transform your business",
   },
   blogTags: [
     "/ AI /",
@@ -89,7 +89,7 @@ export const blogDetailsData: BlogDetailsPageData = {
   footer: {
     headings: ["We are always ready to help you and answer your questions"],
     description:
-      "Pacific hake false trevally queen parrotfish black prickleback mosshead warbonnet sweeper! Greenling sleeper.",
+      "Let’s collaborate to bring your AI vision to life with speed and precision.",
     gradientIndex: 0,
     gradientWordCount: 2,
   },

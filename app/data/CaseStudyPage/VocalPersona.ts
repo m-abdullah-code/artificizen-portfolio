@@ -102,7 +102,7 @@ export const caseStudiesData: CaseStudiesData = {
     ],
   },
   impactResults: {
-    title: "Impact&Results",
+    title: "Impact & Results",
     text: "The media company has reduced voice production costs by 78% and decreased time-to-market for localized content by 64%. Content personalization initiatives using VocalPersona have increased user engagement by 37% and subscription retention by 18%. The accessibility applications have helped over 3,000 users with speech impairments communicate more effectively, with 91% reporting improved quality of life. The platform now processes over 500,000 minutes of voice transformation monthly with a 99.3% quality satisfaction rating.",
   },
   whyItMatters: {

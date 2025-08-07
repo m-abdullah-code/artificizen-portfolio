@@ -1,6 +1,7 @@
 import React from "react";
 import { BlogCardProps } from "../interfaces/BlogCard";
 import Image from "next/image";
+import Link from "next/link";
 
 const BlogCard: React.FC<BlogCardProps> = ({
   image,
@@ -9,8 +10,11 @@ const BlogCard: React.FC<BlogCardProps> = ({
   content,
   links,
   height = "152px",
+  href,
 }) => {
   return (
+    <>
+    <Link href={href} className="block hover:no-underline">
     <div className="bg-white shadow-lg rounded-lg pb-5">
       <div className="relative w-full" style={{ height }}>
         <Image
@@ -31,6 +35,8 @@ const BlogCard: React.FC<BlogCardProps> = ({
         <p className="text-sm mt-5 text-gray-600">{links.join(" / ")}</p>
       </div>
     </div>
+    </Link>
+    </>
   );
 };
 

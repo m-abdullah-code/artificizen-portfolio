@@ -102,7 +102,7 @@ export const caseStudiesData: CaseStudiesData = {
     ],
   },
   impactResults: {
-    title: "Impact&Results",
+    title: "Impact & Results",
     text: "Executives using ExecSuite report reclaiming an average of 15 hours per week previously spent on administrative tasks. Meeting preparation time has decreased by 62%, while meeting effectiveness scores have increased by 43%. The system has reduced travel-related stress by 57% through proactive management of logistics and alternatives. Overall, executives report a 38% increase in time spent on strategic initiatives and a 27% improvement in work-life balance.",
   },
   whyItMatters: {
