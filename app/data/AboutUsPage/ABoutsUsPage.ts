@@ -2,7 +2,7 @@ import Background from "../../../public/assets/AboutUs/About Us bg.png";
 import CardImage1 from "../../../public/assets/AboutUs/pioneeringAI.jpg.png";
 import CardImage2 from "../../../public/assets/AboutUs/philosphy.jpg.png";
 import Umair from "../../../public/assets/AboutUs/umair.png";
-import Talha from "../../../public/assets/AboutUs/talha.png";
+import Talha from "../../../public/assets/AboutUs/talhaNisar.png";
 import Asfar from "../../../public/assets/AboutUs/asfar.png";
 import Zain from "../../../public/assets/AboutUs/zain.png";
 import Shoaib from "../../../public/assets/AboutUs/sohaib.png";
