@@ -18,10 +18,10 @@ export const footerData: FooterData = {
     description:
       "Fill out the form or drop us a message — we usually reply within 30 minutes.",
     formFields: [
-      { type: "text", placeholder: "Full name" },
-      { type: "email", placeholder: "Email" },
-      { type: "text", placeholder: "Subject" },
-      { type: "textarea", placeholder: "Message", rows: 3 },
+      { type: "text", placeholder: "Full name", name: "name" },
+      { type: "email", placeholder: "Email", name: "email" },
+      { type: "text", placeholder: "Subject", name: "subject" },
+      { type: "textarea", placeholder: "Message", name: "message", rows: 3 },
     ],
     submitButton: "Send a message",
   },
@@ -97,7 +97,7 @@ export const footerData: FooterData = {
     links: [
       { label: "AI Chatbots", url: "/services/chatbot-solutions" },
       { label: "AI SaaS Development", url: "/services/saas-development" },
-      { label: "POC /MVP Development", url: "/services/poc-mvp-development" },
+      { label: "PoC/MVP Development", url: "/services/poc-mvp-development" },
       { label: "Enterprise AI Automation", url: "/services/ai-automation" },
       { label: "Cloud Infrastructure", url: "/services/cloud-infrastructure" },
       { label: "Other Services", url: "/services/other" },

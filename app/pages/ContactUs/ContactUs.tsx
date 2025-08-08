@@ -299,7 +299,7 @@ const iconMap: { [key: string]: React.ComponentType } = {
 const ContactUs = () => {
   // Form state
   const [formData, setFormData] = useState({
-    fullName: "",
+    name: "",
     email: "",
     subject: "",
     message: "",
@@ -323,14 +323,14 @@ const ContactUs = () => {
 
     try {
       // Initialize EmailJS with your User ID
-      emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS User ID
+      emailjs.init("wmFIS1dKUZ53lp9ik"); // Replace with your EmailJS User ID
 
       // Send email using EmailJS
       await emailjs.send(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS Service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS Template ID
+        "service_2erv06i", // Replace with your EmailJS Service ID
+        "template_uf15mb9", // Replace with your EmailJS Template ID
         {
-          full_name: formData.fullName,
+          full_name: formData.name,
           email: formData.email,
           subject: formData.subject,
           message: formData.message,
@@ -338,7 +338,7 @@ const ContactUs = () => {
       );
 
       setStatus("Message sent successfully!");
-      setFormData({ fullName: "", email: "", subject: "", message: "" });
+      setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
       console.error("EmailJS error:", error);
       setStatus("Failed to send message. Please try again.");
@@ -472,9 +472,9 @@ const ContactUs = () => {
             <form className="space-y-3" onSubmit={handleSubmit}>
               <input
                 type="text"
-                name="fullName"
+                name="name"
                 placeholder="Full Name"
-                value={formData.fullName}
+                value={formData.name}
                 onChange={handleChange}
                 className="w-full p-2 border-b border-gray-300 bg-transparent text-black placeholder-gray-500 focus:outline-none"
                 required

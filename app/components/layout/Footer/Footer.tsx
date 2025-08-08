@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import Elipse from "../../../../public/assets/Footer/Ellipse 1.png";
 import Alogo from "../../../../public/assets/logo/Artificizen-Logo.png";
@@ -10,6 +12,8 @@ import { footerData } from "../../../data/Footer";
 import { IconKey, FooterData } from "../../../interfaces/Footer";
 import { IconType } from "react-icons";
 import Link from "next/link";
+import emailjs from "@emailjs/browser";
+import { contactUsData } from "@/app/data/ContactUs/ContactUs";
 
 const iconMap: Record<IconKey, IconType> = {
   MdWhatsapp: MdWhatsapp,
@@ -34,6 +38,55 @@ const Footer: React.FC<FooterProps> = ({
   gradientWordCount = 1,
 }) => {
   const typedFooterData: FooterData = footerData;
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [status, setStatus] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Handle form input changes
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setStatus(null);
+
+    try {
+      // Initialize EmailJS with your User ID
+      emailjs.init("wmFIS1dKUZ53lp9ik"); // Replace with your EmailJS User ID
+
+      // Send email using EmailJS
+      await emailjs.send(
+        "service_2erv06i", // Replace with your EmailJS Service ID
+        "template_uf15mb9", // Replace with your EmailJS Template ID
+        {
+          full_name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }
+      );
+
+      setStatus("Message sent successfully!");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      setStatus("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="bg-[#1F1F1F] text-white rounded-lg">
@@ -112,7 +165,71 @@ const Footer: React.FC<FooterProps> = ({
             <p className="text-base text-black">
               {typedFooterData.contactForm.description}
             </p>
-            <form className="space-y-3">
+            <form className="space-y-3" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full p-2 border-b border-gray-300 bg-transparent text-black placeholder-gray-500 focus:outline-none"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full p-2 border-b border-gray-300 bg-transparent text-black placeholder-gray-500 focus:outline-none"
+                required
+              />
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                value={formData.subject}
+                onChange={handleChange}
+                className="w-full p-2 border-b border-gray-300 bg-transparent text-black placeholder-gray-500 focus:outline-none"
+                required
+              />
+              <textarea
+                name="message"
+                placeholder="Message"
+                rows={4}
+                value={formData.message}
+                onChange={handleChange}
+                className="w-full p-2 border-b border-gray-300 bg-transparent text-black placeholder-gray-500 resize-none focus:outline-none"
+                required
+              />
+
+              <button
+                type="submit"
+                className="flex items-center gap-2 p-2 px-4 bg-black text-white rounded-full hover:bg-gray-800 transition-colors text-sm mt-3 cursor-pointer"
+                disabled={isSubmitting}
+              >
+                <Image
+                  src={contactUsData.formSection.buttonIcon}
+                  alt="Send Icon"
+                  className="h-3 w-3 mt-[2px]"
+                />
+                {isSubmitting
+                  ? "Sending..."
+                  : contactUsData.formSection.buttonText}
+              </button>
+            </form>
+            {status && (
+              <p
+                className={`mt-4 text-sm ${
+                  status.includes("successfully")
+                    ? "text-green-600"
+                    : "text-red-600"
+                }`}
+              >
+                {status}
+              </p>
+            )}
+            {/* <form className="space-y-3">
               {typedFooterData.contactForm.formFields.map((field, index) =>
                 field.type === "textarea" ? (
                   <textarea
@@ -136,7 +253,7 @@ const Footer: React.FC<FooterProps> = ({
               >
                 {typedFooterData.contactForm.submitButton}
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
         <hr className="mt-16" />

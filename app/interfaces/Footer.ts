@@ -38,6 +38,7 @@ export interface FooterData {
     formFields: Array<{
       type: string;
       placeholder: string;
+      name: string;
       rows?: number;
     }>;
     submitButton: string;

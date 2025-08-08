@@ -983,7 +983,7 @@ const Form = () => {
     return questionId;
   };
 
-  return (  
+  return (
     <div>
       <p className="text-[clamp(1.5rem,2.5vw,2.25rem)]">
         BYC Partner Program Application
