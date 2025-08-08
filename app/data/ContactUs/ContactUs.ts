@@ -2,7 +2,7 @@ import { ContactUsPageData } from "@/app/interfaces/ContactUs";
 import Contact from "../../../public/assets/ContactUs/contactMain.png";
 import Elipse from "../../../public/assets/Footer/Ellipse 1.png";
 import Alogo from "../../../public/assets/logo/Artificizen-Logo.png";
-import WhiteIcon from "../../../public/assets/Services/whiteIcon.png";
+import WhiteIcon from "../../../public/assets/Icons/WLeftIcon.png";
 
 export const contactUsData: ContactUsPageData = {
   banner: {

@@ -2,7 +2,7 @@ import { BYCPageData } from "@/app/interfaces/PartnershipPage";
 import BycImage from "../../../public/assets/Byc/byc main.png";
 import Left1 from "../../../public/assets/Byc/byc1.png";
 import Group from "../../../public/assets/Services/Group.png";
-import WhiteIcon from "../../../public/assets/Services/whiteIcon.png";
+import WhiteIcon from "../../../public/assets/Icons/WLeftIcon.png";
 import Byc2 from "../../../public/assets/Byc/byc2.jpg";
 
 export const bycData: BYCPageData = {

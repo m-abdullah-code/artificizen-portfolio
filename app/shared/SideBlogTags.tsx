@@ -15,9 +15,9 @@ const TagSection: React.FC<TagSectionProps> = ({ title, tags, icon }) => {
         <p className="text-xl text-black font-semibold">{title}</p>
         {icon &&
           (typeof icon === "string" ? (
-            <Image src={icon} alt="icon" className="w-3 h-3" />
+            <Image src={icon} alt="icon" className="w-4 h-4" />
           ) : (
-            <Image src={icon} alt="icon" className="w-3 h-3" />
+            <Image src={icon} alt="icon" className="w-4 h-4" />
           ))}
       </div>
 

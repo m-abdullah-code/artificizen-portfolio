@@ -2,7 +2,7 @@ import TopBannerCard from "@/app/shared/TopBannerCard";
 import React from "react";
 import SideCard from "@/app/shared/SideCard";
 import Image from "next/image";
-import BlackIcon from "../../../public/assets/career/blackIcon.png";
+import BlackIcon from "../../../public/assets/Icons/BLeftIcon.png";
 import TableComponent from "@/app/shared/CareerTable";
 import Footer from "@/app/components/layout/Footer/Footer";
 import { careerDetails } from "@/app/data/Career/CareerDetails";
@@ -69,7 +69,7 @@ const CareerDetails = () => {
                     <Image
                       src={BlackIcon}
                       alt="check"
-                      className="w-2 h-2 mt-2"
+                      className="w-3 h-3 mt-1"
                     />
                     <span className="text-base leading-5">{point}</span>
                   </li>

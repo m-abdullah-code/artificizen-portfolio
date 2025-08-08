@@ -2,8 +2,8 @@ import { ServicesPageData } from "@/app/interfaces/ServicesPages";
 import Banner from "../../../../public/assets/Services/enterpriseMain.png";
 import Main from "../../../../public/assets/Services/enterpriseBg.jpg";
 import BgCard from "../../../../public/assets/Services/bgCard2.jpg";
-import Left from "../../../../public/assets/Services/whiteIconc.png";
-import Right from "../../../../public/assets/Services/whiteIcon.png";
+import Left from "../../../../public/assets/Icons/WRightIcon.png";
+import Right from "../../../../public/assets/Icons/WLeftIcon.png";
 import Group from "../../../../public/assets/Services/Group.png";
 
 export const serviceData: ServicesPageData = {

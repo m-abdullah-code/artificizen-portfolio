@@ -95,7 +95,12 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/assets/logo/Artificizen-Logo.png"
+              // src="/assets/logo/Artificizen-Logo.png"
+              src={
+                isScrolled && pathname == "/"
+                  ? "/assets/Icons/ArtificizenLogo.png" // Logo after scroll
+                  : "/assets/logo/Artificizen-Logo.png" // Logo before scroll
+              }
               alt="Artificizen"
               width={160}
               height={40}

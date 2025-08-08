@@ -4,8 +4,8 @@ import TopBannerCard from "@/app/shared/TopBannerCard";
 import Image from "next/image";
 import React from "react";
 import { ServicesPageData } from "@/app/interfaces/ServicesPages";
-import BulletIcon from "../../../public/assets/Services/whiteIcon.png";
-import Icon from "../../../public/assets/Services/Container.png";
+import BulletIcon from "../../../public/assets/Icons/WLeftIcon.png";
+import Icon from "../../../public/assets/Icons/BLeftIcon.png";
 import Footer from "@/app/components/layout/Footer/Footer";
 import Link from "next/link";
 
@@ -60,7 +60,7 @@ const ServicesPages = ({ data }: { data: ServicesPageData }) => {
                             alt="arrow"
                             width={2}
                             height={3}
-                            className="w-2 h-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                            className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"
                           />
                         </li>
                       ))}
@@ -120,7 +120,7 @@ const ServicesPages = ({ data }: { data: ServicesPageData }) => {
                 <ul className="space-y-0">
                   {data.mainSection.trends.bulletPoints.map((point, idx) => (
                     <li key={idx} className="flex items-start gap-3">
-                      <Image src={Icon} alt="Bullet" className="w-2 h-3 mt-2" />
+                      <Image src={Icon} alt="Bullet" className="w-3 h-3 mt-2" />
                       <span className="text-lg">
                         <b>{point.title}</b> {point.content}
                       </span>
@@ -150,7 +150,7 @@ const ServicesPages = ({ data }: { data: ServicesPageData }) => {
                         <Image
                           src={Icon}
                           alt="Bullet"
-                          className="w-2 h-3 mt-2"
+                          className="w-2 h-2 mt-3"
                         />
                         <span className="text-lg">
                           <b>{point.title}</b> {point.content}
@@ -181,7 +181,7 @@ const ServicesPages = ({ data }: { data: ServicesPageData }) => {
                 <ul className="space-y-0">
                   {data.mainSection.advantage.bulletPoints.map((point, idx) => (
                     <li key={idx} className="flex items-start gap-3">
-                      <Image src={Icon} alt="Bullet" className="w-2 h-3 mt-2" />
+                      <Image src={Icon} alt="Bullet" className="w-2 h-2 mt-2" />
                       <span className="text-base font-bold">
                         <b>{point.title}</b> {point.content}
                       </span>

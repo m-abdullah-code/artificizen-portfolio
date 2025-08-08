@@ -1,7 +1,7 @@
 import TopBannerCard from "@/app/shared/TopBannerCard";
 import React from "react";
 import Image from "next/image";
-import BulletIcon from "../../../public/assets/CaseStudy/Icon.png";
+import BulletIcon from "../../../public/assets/Icons/BLeftIcon.png";
 import { CaseStudiesData } from "@/app/interfaces/CaseStudyPage";
 import Footer from "../layout/Footer/Footer";
 import { caseStudiesData } from "@/app/data/CaseStudyPage/AgentForge";
@@ -173,7 +173,7 @@ const CaseStudiesDynamicPage = ({ data }: { data: CaseStudiesData }) => {
                       <Image
                         src={BulletIcon}
                         alt="Bullet"
-                        className="w-3 h-4 mt-1"
+                        className="w-3 h-3 mt-2"
                       />
                       <span className=" text-base md:text-lg">
                         <b>{point.title}</b> {point.content}

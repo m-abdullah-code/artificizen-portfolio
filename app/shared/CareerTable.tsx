@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Icon from "../../public/assets/career/blackIcon.png";
+import Icon from "../../public/assets/Icons/BLeftIcon.png";
 import { TableComponentProps } from "../interfaces/careerPage";
 
 const TableComponent: React.FC<TableComponentProps> = ({ rows }) => {
@@ -36,7 +36,13 @@ const TableComponent: React.FC<TableComponentProps> = ({ rows }) => {
           <div className="flex items-end justify-end">
             <div className="inline-block mt-10 rounded-full p-[2px] bg-gradient-to-r from-[#0B5CFF99] to-[#FF710C]">
               <button className="flex items-center gap-2 rounded-full bg-white text-black px-10 py-2 text-base font-medium">
-                <Image src={Icon} alt="icon" width={8} height={7} />
+                <Image
+                  src={Icon}
+                  alt="icon"
+                  width={8}
+                  height={7}
+                  className="w-3 h-3"
+                />
                 Explore more
               </button>
             </div>

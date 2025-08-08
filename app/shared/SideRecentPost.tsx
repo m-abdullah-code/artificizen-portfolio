@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react";
-import Icon from "../../public/assets/career/blackIcon.png";
+import Icon from "../../public/assets/Icons/BLeftIcon.png";
 
 type Post = {
   date: string;
@@ -22,7 +22,7 @@ const SideRecentPost: React.FC<SideRecentPostProps> = ({
       {/* Header */}
       <div className="flex justify-between items-center mb-2">
         <p className="text-xl text-black font-semibold">{heading}</p>
-        <Image src={Icon} alt="Icon" className="w-3 h-3" />
+        <Image src={Icon} alt="Icon" className="w-4 h-4" />
       </div>
 
       {/* Divider */}

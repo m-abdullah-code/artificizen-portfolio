@@ -7,7 +7,7 @@ import SideImage from "../../../public/assets/CaseStudy/2ndCardbg.jpg.png";
 import S1 from "../../../public/assets/Blog/s1.png";
 import S2 from "../../../public/assets/Blog/s2.png";
 import S3 from "../../../public/assets/Blog/s3.jpg";
-import Icon from "../../../public/assets/career/blackIcon.png";
+import Icon from "../../../public/assets/Icons/BLeftIcon.png";
 import { BlogPageData } from "@/app/interfaces/BlogPage";
 
 export const blogData: BlogPageData = {
