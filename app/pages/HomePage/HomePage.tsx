@@ -17,31 +17,33 @@ import { storySectionData } from "@/app/data/HomePage/UserStory";
 const HomePage = () => {
   return (
     <>
-      <HeroSection />
-      <div className="p-5 md:p-10 ">
-        <ServicesSection data={servicesData} />
-        <AboutUsSection />
-        <ProjectSection />
-        <AwardsSection />
-        <TestimonialsSection />
-      </div>
-      <AiFuture />
-      <div className="p-5 md:p-10 ">
-        <ChooseUs />
-        <BlogSection data={blogSectionData} />
-        <StorySection data={storySectionData} />
-        <Footer
-          headings={[
-            "Have an Idea?",
-            "A Challenge?",
-            "Or Just Curious",
-            "About What AI Can",
-            "Do For Your Business?",
-          ]}
-          description="Let’s collaborate to bring your AI vision to life with speed and precision."
-          gradientIndex={0}
-          gradientWordCount={0}
-        />
+      <div className="">
+        <HeroSection />
+        <div className="p-5">
+          <ServicesSection data={servicesData} />
+          <AboutUsSection />
+          <ProjectSection />
+          <AwardsSection />
+          <TestimonialsSection />
+        </div>
+        <AiFuture />
+        <div className="p-5">
+          <ChooseUs />
+          <BlogSection data={blogSectionData} />
+          <StorySection data={storySectionData} />
+          <Footer
+            headings={[
+              "Have an Idea?",
+              "A Challenge?",
+              "Or Just Curious",
+              "About What AI Can",
+              "Do For Your Business?",
+            ]}
+            description="Let’s collaborate to bring your AI vision to life with speed and precision."
+            gradientIndex={0}
+            gradientWordCount={0}
+          />
+        </div>
       </div>
     </>
   );

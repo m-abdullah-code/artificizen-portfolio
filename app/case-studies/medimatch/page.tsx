@@ -3,7 +3,7 @@ import CaseStudiesDynamicPage from "@/app/components/CaseStudiesDynamicPage/case
 import { caseStudiesData } from "../../data/CaseStudyPage/MediMatch";
 const MediMatchpage = () => {
   return (
-    <div className="mt-20 p-5 md:p-10">
+    <div className="mt-20 p-5">
       <CaseStudiesDynamicPage data={caseStudiesData} />
     </div>
   );

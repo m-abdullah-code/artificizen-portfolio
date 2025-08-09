@@ -5,14 +5,16 @@ import React from "react";
 
 const CaseStudyPage = () => {
   return (
-    <div className="p-5 md:p-10 mt-20">
-      <TopBannerCard
-        imageSrc={caseStudyData.topBanner.imageSrc}
-        title={caseStudyData.topBanner.title}
-        description={caseStudyData.topBanner.description}
-      />
-      <div className="mt-10">
-        <CaseStudy />
+    <div className="p-5 mt-20">
+      <div className="container max-w-full">
+        <TopBannerCard
+          imageSrc={caseStudyData.topBanner.imageSrc}
+          title={caseStudyData.topBanner.title}
+          description={caseStudyData.topBanner.description}
+        />
+        <div className="mt-10">
+          <CaseStudy />
+        </div>
       </div>
     </div>
   );

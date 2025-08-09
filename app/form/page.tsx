@@ -3,7 +3,7 @@ import ApplyForm from "../components/Form/Form";
 
 const page = () => {
   return (
-    <div className="p-5 md:p-10">
+    <div className="p-5">
       <ApplyForm />
     </div>
   );

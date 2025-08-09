@@ -11,7 +11,7 @@ import { blogDetailsData } from "@/app/data/BlogPage/Blogdetails";
 
 const BlogDetails = () => {
   return (
-    <div>
+    <div className="container max-w-full">
       <TopBannerCard
         imageSrc={blogDetailsData.banner.image}
         title={blogDetailsData.banner.title}

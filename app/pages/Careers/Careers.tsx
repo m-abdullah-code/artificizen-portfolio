@@ -6,7 +6,7 @@ import React from "react";
 
 export default function CareerPage() {
   return (
-    <div>
+    <div className="container max-w-full">
       <TopBannerCard
         imageSrc={careerData.banner.image}
         title={careerData.banner.title}

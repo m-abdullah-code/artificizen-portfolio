@@ -6,7 +6,7 @@ import Footer from "@/app/components/layout/Footer/Footer";
 
 const AboutUsPage = () => {
   return (
-    <div>
+    <div className="container max-w-full">
       {/* Top Image with Centered Text */}
       <div className="relative w-full bg-[#F0F2F4]">
         {/* Background Image */}

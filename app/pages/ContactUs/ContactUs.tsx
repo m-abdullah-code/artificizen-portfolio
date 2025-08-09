@@ -348,7 +348,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div>
+    <div className="container max-w-full">
       <TopBannerCard
         imageSrc={contactUsData.banner.image}
         title={contactUsData.banner.title}

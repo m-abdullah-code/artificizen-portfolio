@@ -11,7 +11,7 @@ import Link from "next/link";
 
 const BringYourClient = () => {
   return (
-    <div>
+    <div className="container max-w-full">
       <TopBannerCard
         imageSrc={bycData.banner.image}
         title={bycData.banner.title}

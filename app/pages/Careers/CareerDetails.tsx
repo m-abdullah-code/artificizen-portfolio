@@ -9,7 +9,7 @@ import { careerDetails } from "@/app/data/Career/CareerDetails";
 
 const CareerDetails = () => {
   return (
-    <div>
+    <div className="container max-w-full">
       <TopBannerCard
         imageSrc={careerDetails.banner.image}
         title={careerDetails.banner.title}

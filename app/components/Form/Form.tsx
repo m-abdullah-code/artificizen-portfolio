@@ -984,7 +984,7 @@ const Form = () => {
   };
 
   return (
-    <div>
+    <div className="container max-w-full">
       <p className="text-[clamp(1.5rem,2.5vw,2.25rem)]">
         BYC Partner Program Application
       </p>

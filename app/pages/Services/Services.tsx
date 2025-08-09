@@ -12,7 +12,7 @@ import Footer from "@/app/components/layout/Footer/Footer";
 const Services = () => {
   return (
     <>
-      <div>
+      <div className="container max-w-full">
         <TopBannerCard
           imageSrc={serviceData.image}
           title={serviceData.heading}
@@ -30,11 +30,11 @@ const Services = () => {
       </div>
       <div>
         <Footer
-        headings={serviceData.footer.headings}
-        description={serviceData.footer.description}
-        gradientIndex={serviceData.footer.gradientIndex}
-        gradientWordCount={serviceData.footer.gradientWordCount}
-      />
+          headings={serviceData.footer.headings}
+          description={serviceData.footer.description}
+          gradientIndex={serviceData.footer.gradientIndex}
+          gradientWordCount={serviceData.footer.gradientWordCount}
+        />
       </div>
     </>
   );
