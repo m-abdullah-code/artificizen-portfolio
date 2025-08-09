@@ -12,6 +12,7 @@ export default function CareerPage() {
         title={careerData.banner.title}
         description={careerData.banner.description}
       />
+
       <TableComponent rows={careerData.rows} />
       <div>
         <Footer
