@@ -9,6 +9,12 @@ export const storySectionData: StorySectionData = {
         "Artificizen helped us build a powerful AI chatbot that cut our support workload by 60%. The team was responsive, insightful, and delivered ahead of schedule.",
     },
     {
+      heading: "Umair. – Founder",
+      stars: 5,
+      content:
+        "Artificizen helped us build a powerful AI chatbot that cut our support workload by 60%. The team was responsive, insightful, and delivered ahead of schedule.",
+    },
+    {
       heading: "James R. – Product Manager",
       stars: 5,
       content:
