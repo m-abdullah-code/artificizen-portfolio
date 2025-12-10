@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { CardData } from "../interfaces/CardWithContent";
 import Link from "next/link";
+import shareIcon from "@/public/assets/Icons/shareIcon.svg"
 
 const CardWithContent = ({
   topText,
@@ -15,77 +16,137 @@ const CardWithContent = ({
   wordCount = 0,
 }: CardData) => {
   return (
-    <div className="flex flex-col md:flex-row">
-      <div
-        className={`w-full md:w-1/2 ${
-          imagePosition === "right" ? "md:order-2" : "md:order-1"
-        }`}
-      >
-        {image && (
-          <Image
-            src={image}
-            alt="Image"
-            width={400}
-            height={400}
-            className="w-full lg:max-h-[85%] 2xl:max-h-[55%] object-cover rounded-[25px]"
-          />
-        )}
-      </div>
-      <div
-        className={`w-full md:w-1/2 p-1 md:p-6 flex flex-col justify-between ${
-          imagePosition === "right" ? "md:order-1" : "md:order-2"
-        }`}
-      >
-        <div>
-          <p className="text-base text-gray-600 mb-2 mt-5 lg:mt-0">{topText}</p>
+    <div className="max-w-[1360px] mx-auto">
+      <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-13">
+
+        {/* LEFT IMAGE */}
+        <div
+          className={`
+        w-full 
+        h-[260px]           /* mobile height */
+        sm:h-[400px]
+        md:h-[500px]
+        lg:h-[630px] 
+        lg:w-[55%] 
+        rounded-[20px] 
+        sm:rounded-[25px]
+        overflow-hidden 
+        ${imagePosition === "right" ? "lg:order-2" : "lg:order-1"}
+      `}
+        >
+          {image && (
+            <Image
+              src={image}
+              alt="Image"
+              loading="lazy"
+              className="w-full h-full object-cover"
+            />
+          )}
+        </div>
+
+        {/* RIGHT CONTENT */}
+        <div
+          className={`
+        w-full 
+        lg:w-[45%] 
+        ${imagePosition === "right" ? "lg:order-1" : "lg:order-2"}
+      `}
+        >
+          {/* top small label */}
+          <p className="text-sm sm:text-base font-medium leading-normal text-[var(--text-primary-color)]">
+            {topText}
+          </p>
+
+          {/* heading */}
           <h2
-            className=" font-semibold leading-12 mb-4 leading-[clamp(2rem,6vw,3rem)]"
-            style={{
-              fontSize: "clamp(1.5rem, 5vw, 2.7rem)",
-            }}
+            className="
+          font-normal 
+          leading-tight 
+          mb-4 
+          text-[28px]      /* mobile size */
+          sm:text-4xl 
+          md:text-5xl 
+          text-[var(--text-primary-color)]
+        "
           >
             {heading.map((line, currentLineIndex) => {
               const words = line.split(" ");
               if (currentLineIndex === lineIndex && wordCount > 0) {
                 const gradientText = words.slice(0, wordCount).join(" ");
                 const remainingText = words.slice(wordCount).join(" ");
+
                 return (
-                  <span key={currentLineIndex} className="block">
+                  <div key={currentLineIndex}>
                     <span className="bg-gradient-to-r from-[#0B5CFF99] to-[#FF710C] bg-clip-text text-transparent">
                       {gradientText}
                     </span>
                     {remainingText && (
                       <span className="text-black"> {remainingText}</span>
                     )}
-                  </span>
+                  </div>
                 );
               }
+
               return (
-                <span key={currentLineIndex} className="block text-black">
+                <div key={currentLineIndex} className="text-black">
                   {line}
-                </span>
+                </div>
               );
             })}
           </h2>
-          <div className="text-base text-gray-600 mb-6">
-            {content.map((line, lineIndex) => (
-              <p key={lineIndex} className="mb-2 last:mb-0">
+
+          {/* content paragraphs */}
+          <div className="mb-6 sm:mb-7">
+            {content.map((line, index) => (
+              <p
+                key={index}
+                className="
+              text-sm 
+              sm:text-base 
+              font-normal 
+              text-[var(--text-secondary-color)] 
+              leading-relaxed 
+              mb-4
+            "
+              >
                 {line}
               </p>
             ))}
           </div>
+
+          {/* button */}
           {buttonText && (
-            <div>
-              <Link href={href}>
-                <button className="text-sm w-[190px] px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors cursor-pointer">
-                  {buttonText}
-                </button>
-              </Link>
-            </div>
+            <Link href={href}>
+              <button
+                className="
+              px-6 
+              py-3 
+              bg-blue-600 
+              text-white 
+              rounded-full 
+              hover:bg-blue-700 
+              transition 
+              text-sm 
+              cursor-pointer 
+              flex 
+              items-center 
+              gap-2.5
+            "
+              >
+                <Image
+                  src={shareIcon}
+                  alt="Share Icon"
+                  loading="lazy"
+                  className="w-4 h-4 object-contain"
+                />
+                {buttonText}
+              </button>
+            </Link>
           )}
         </div>
       </div>
     </div>
+
   );
 };
 

@@ -27,6 +27,7 @@ const CaseStudiesDynamicPage = ({ data }: { data: CaseStudiesData }) => {
                   <Image
                     src={data.cards.client.image}
                     alt="icon"
+                    loading="lazy"
                     width={120}
                     height={120}
                     className="object-contain"
@@ -97,6 +98,7 @@ const CaseStudiesDynamicPage = ({ data }: { data: CaseStudiesData }) => {
                 <Image
                   src={data.overview.image}
                   alt="Overview Image"
+                  loading="lazy"
                   className="rounded-xl object-cover"
                 />
               </div>
@@ -115,6 +117,7 @@ const CaseStudiesDynamicPage = ({ data }: { data: CaseStudiesData }) => {
                   <Image
                     key={index}
                     src={image}
+                    loading="lazy"
                     alt="Client Need Image"
                     className="rounded-xl object-cover"
                   />
@@ -138,6 +141,7 @@ const CaseStudiesDynamicPage = ({ data }: { data: CaseStudiesData }) => {
                 {/* Logo/Image */}
                 <Image
                   src={data.solution.vectorImage}
+                  loading="lazy"
                   alt="Logo"
                   className="w-8 h-8 object-contain hidden md:block"
                 />
@@ -174,6 +178,7 @@ const CaseStudiesDynamicPage = ({ data }: { data: CaseStudiesData }) => {
                         <Image
                           src={BulletIcon}
                           alt="Bullet"
+                          loading="lazy"
                           className="w-3 h-3 mt-2"
                         />
                         <span className=" text-base md:text-lg">

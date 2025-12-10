@@ -2,38 +2,33 @@ import React from "react";
 import { CardData } from "../interfaces/Card";
 import Image from "next/image";
 
-const Card = ({ heading, content, image }: CardData) => {
+const Card = ({
+  heading,
+  content,
+  image,
+  headingClassName,
+  contentClassName,
+}: CardData) => {
   return (
-    <div className=" bg-white rounded-xl shadow-md md:max-w-4xl relative overflow-hidden h-68">
-      <div className="md:flex">
-        <div className="p-6">
-          <h2 className="text-xl font-semibold text-[#111111] mb-2">
+    <div className=" bg-white rounded-xl max-w-4xl hover:shadow-[0px_0px_30px_0px_#386BB73D] transition-all duration-300">
+      <div className="py-6 px-10 icon_hover">
+        <div className="">
+          <h2 className={`mb-3 ${headingClassName}`}>
             {heading}
           </h2>
-          <p className="text-[#333333] mb-14 text-base">{content}</p>
-          <div className="#E9EBED">
-            {/* {icons.length > 0 && (
-              <div className="flex space-x-2">
-                {icons.map((icon, index) => (
-                  <span key={index} className="text-gray-500">
-                    {icon}
-                  </span>
-                ))}
-              </div>
-            )} */}
-            {image && (
-              // <div className="bg-[#E9EBED] p-2 rounded-lg max-w-[45px] mt-10">
-              <div className="absolute bottom-4 left-6 bg-[#E9EBED] p-2 rounded-lg max-w-[45px]">
-                <Image
-                  src={image}
-                  alt={heading}
-                  width={27}
-                  height={27}
-                  className="rounded-lg object-cover"
-                />
-              </div>
-            )}
-          </div>
+          <p className={`min-h-24 ${contentClassName}`}>
+            {content}
+          </p>
+        </div>
+        <div className="bg-[#E9EBED] w-[56px] h-[56px] relative rounded-xl flex item-center justify-center mt-7  transition-all duration-300 icon_dev">
+          {image && (
+            <Image
+              src={image}
+              alt={heading}
+              loading="lazy"
+              className="object-contain transition-all duration-300"
+            />
+          )}
         </div>
       </div>
     </div>

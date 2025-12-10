@@ -3,7 +3,7 @@ import { NavItem } from "../interfaces/Navbar";
 export const navigationItems: NavItem[] = [
   {
     label: "SERVICES",
-    href: "/services",
+    href: "/services/chatbot-solutions",
     hasDropdown: true,
     dropdownItems: [
       // { label: "AI Solutions", href: "/services/ai-solutions" },
@@ -20,7 +20,7 @@ export const navigationItems: NavItem[] = [
   },
   {
     label: "CASE STUDIES",
-    href: "/case-studies",
+    href: "/case-study",
     hasDropdown: true,
     dropdownItems: [
       { label: "Case Studies", href: "/case-study" },

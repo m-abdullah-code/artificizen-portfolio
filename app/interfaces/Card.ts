@@ -5,6 +5,8 @@ export interface CardData {
   content: string;
   image?: StaticImageData;
   href?: string;
+  headingClassName?: string;
+  contentClassName?: string;
 }
 
 export interface SectionData {

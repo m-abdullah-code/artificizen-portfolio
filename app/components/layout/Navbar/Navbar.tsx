@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { HiChevronDown, HiMenu, HiX } from "react-icons/hi";
+import { HiMenu, HiX } from "react-icons/hi";
+import { MdOutlineArrowDropDown } from "react-icons/md";
 import { navigationItems } from "@/app/data/NavData";
 import { usePathname } from "next/navigation";
 
@@ -73,35 +74,38 @@ export default function Navigation() {
     },
   };
 
+
+  // ===================
+  // Mobile sub menu dropdown
+  // =====================
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+  const toggleDropdown = (label: string) => {
+    setOpenDropdown(openDropdown === label ? null : label);
+  };
+
+
   return (
     <motion.nav
       variants={navVariants}
       animate={isScrolled ? "solid" : "transparent"}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="fixed top-0 left-0 right-0 z-50"
+      className="fixed top-0 left-0 right-0 z-50 px-6"
     >
-      {/* <div className="container max-w-[94%]"> */}
-      {/* <div
-        className={`container max-w-[94%] rounded-full ${
-          pathname === "/" ? "bg-transparent" : "bg-black"
-        }`}
-      > */}
       <div
-        className={`container max-w-[94%] ${
-          pathname === "/" ? "bg-transparent" : "bg-black"
-        } ${isMobileMenuOpen ? "rounded-none" : "rounded-full"}`}
+        className={`max-w-[1360px] mx-auto ${pathname === "/" ? "bg-transparent" : "bg-black"
+          } ${isMobileMenuOpen ? "rounded-none" : "rounded-full"}`}
       >
         <div className="flex items-center justify-between py-5 min-h-[80px]">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              // src="/assets/logo/Artificizen-Logo.png"
               src={
-                isScrolled && pathname == "/"
-                  ? "/assets/Icons/ArtificizenLogo.png" // Logo after scroll
-                  : "/assets/logo/Artificizen-Logo.png" // Logo before scroll
+                isScrolled && pathname === "/"
+                  ? "/assets/logo/ArtificizenLogo.png" // Logo after scroll
+                  : "/assets/logo/Artificizen-logo.svg" // Logo before scroll
               }
-              alt="Artificizen"
+              alt="Artificizen Logo"
               width={160}
               height={40}
               className="h-10 w-auto"
@@ -110,7 +114,7 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center">
             {navigationItems.map((item) => (
               <div
                 key={item.label}
@@ -123,25 +127,20 @@ export default function Navigation() {
                 <Link
                   href={item.href}
                   className={`
-                    flex items-center space-x-1 text-sm font-medium transition-colors
-                    ${
-                      pathname === "/"
-                        ? isScrolled
-                          ? "text-foreground hover:text-primary"
-                          : "text-white hover:text-blue-200"
-                        : "text-white hover:text-blue-200"
+                    flex items-center space-x-1 text-sm font-bold transition-colors px-4 py-3 rounded-4xl hover:bg-white
+                    ${pathname === "/"
+                      ? isScrolled
+                        ? "text-[var(--text-primary-color)] hover:text-white hover:!bg-black"
+                        : "text-white hover:text-[var(--text-primary-color)]"
+                      : "text-[var(--text-primary-color)] hover:text-white hover:!bg-black"
                     }
                   `}
                 >
                   <span>{item.label}</span>
                   {item.hasDropdown && (
                     <motion.div
-                      animate={{
-                        rotate: activeDropdown === item.label ? 180 : 0,
-                      }}
-                      transition={{ duration: 0.2 }}
                     >
-                      <HiChevronDown className="w-4 h-4" />
+                      <MdOutlineArrowDropDown className="w-4 h-4 -rotate-40" />
                     </motion.div>
                   )}
                 </Link>
@@ -178,11 +177,9 @@ export default function Navigation() {
               href="/contact-us"
               className="hidden md:flex items-center justify-center px-6 py-2 rounded-full relative overflow-hidden group border-2 border-transparent bg-gradient-to-r from-[#0B5CFF99] to-[#FF710C] bg-clip-border"
               style={{
-                background: `linear-gradient(${
-                  isScrolled ? "white" : "transparent"
-                }, ${
-                  isScrolled ? "white" : "transparent"
-                }) padding-box, linear-gradient(90deg, #0B5CFF99, #FF710C) border-box`,
+                background: `linear-gradient(${isScrolled ? "white" : "transparent"
+                  }, ${isScrolled ? "white" : "transparent"
+                  }) padding-box, linear-gradient(90deg, #0B5CFF99, #FF710C) border-box`,
                 color: isScrolled ? "#000" : "#fff",
               }}
             >
@@ -204,15 +201,13 @@ export default function Navigation() {
             >
               {isMobileMenuOpen ? (
                 <HiX
-                  className={`w-6 h-6 ${
-                    isScrolled && isHomePage ? "text-black" : "text-white"
-                  }`}
+                  className={`w-6 h-6 ${isScrolled && isHomePage ? "text-black" : "text-white"
+                    }`}
                 />
               ) : (
                 <HiMenu
-                  className={`w-6 h-6 ${
-                    isScrolled && isHomePage ? "text-black" : "text-white"
-                  }`}
+                  className={`w-6 h-6 ${isScrolled && isHomePage ? "text-black" : "text-white"
+                    }`}
                 />
               )}
             </button>
@@ -234,6 +229,7 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Menu */}
+        {/* Mobile Menu */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
@@ -241,46 +237,66 @@ export default function Navigation() {
               initial="closed"
               animate="open"
               exit="closed"
-              className="lg:hidden overflow-hidden bg-white rounded-lg shadow-lg mt-2 mb-4"
+              className="lg:hidden overflow-scroll bg-white rounded-lg shadow-lg mt-2 mb-4  max-h-[80vh]"
             >
               <div className="py-4 space-y-2">
                 {navigationItems.map((item) => (
                   <div key={item.label}>
-                    <Link
-                      href={item.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="block px-4 py-3 text-sm font-medium text-foreground hover:bg-muted transition-colors"
+                    {/* Parent Item (with dropdown toggle) */}
+                    <div
+                      onClick={() => item.hasDropdown ? toggleDropdown(item.label) : setIsMobileMenuOpen(false)}
+                      className="flex justify-between items-center px-4 py-3 text-sm font-medium text-foreground hover:bg-muted transition-colors cursor-pointer"
                     >
-                      {item.label}
-                    </Link>
+                      <span>{item.label}</span>
 
-                    {/* Mobile Dropdown Items */}
-                    {item.hasDropdown && item.dropdownItems && (
-                      <div className="bg-muted/50">
-                        {item.dropdownItems.map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.label}
-                            href={dropdownItem.href}
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            className="block px-8 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      {/* Dropdown Arrow */}
+                      {item.hasDropdown && (
+                        <motion.span
+                          animate={{ rotate: openDropdown === item.label ? 180 : 0 }}
+                          transition={{ duration: 0.25 }}
+                        >
+                          ▼
+                        </motion.span>
+                      )}
+                    </div>
+
+                    {/* Dropdown Items */}
+                    {item.hasDropdown && (
+                      <AnimatePresence>
+                        {openDropdown === item.label && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                            className="overflow-hidden bg-muted/50"
                           >
-                            {dropdownItem.label}
-                          </Link>
-                        ))}
-                      </div>
+                            {item.dropdownItems?.map((dropdownItem) => (
+                              <Link
+                                key={dropdownItem.label}
+                                href={dropdownItem.href}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="block px-8 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                              >
+                                {dropdownItem.label}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     )}
                   </div>
                 ))}
 
                 {/* Mobile CTA */}
-                <div className="px-4 pt-4 ">
+                <div className="px-4 pt-4">
                   <Link
                     href="/contact-us"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block w-full text-center px-6 py-3 bg-gradient-to-r from-[#0B5CFF99] to-[#FF710C] text-white rounded-full font-medium text-sm hover:opacity-90 transition-all duration-300 relative overflow-hidden group"
                   >
                     <span className="relative z-10">HIRE US</span>
-                    {/* Shine effect for mobile */}
+
                     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
                   </Link>
                 </div>
@@ -288,6 +304,7 @@ export default function Navigation() {
             </motion.div>
           )}
         </AnimatePresence>
+
       </div>
     </motion.nav>
   );

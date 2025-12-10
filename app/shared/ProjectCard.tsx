@@ -12,26 +12,29 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   href,
 }) => {
   const cardContent = (
-    <div className="relative w-full overflow-hidden mb-10 lg:h-[550px]">
+    <div className="relative w-full rounded-2xl sm:rounded-3xl overflow-hidden mb-10 lg:h-[550px]">
+
+      {/* MAIN WRAPPER */}
       <div
-        className={`rounded-3xl flex flex-col md:flex-row justify-between items-center relative z-10 ${backgroundColor}`}
+        className={`flex flex-col md:flex-row justify-between items-center relative z-10 ${backgroundColor}`}
       >
-        <div className="md:w-[50%] p-5 lg:p-20">
-          <div className=" mb-[50px] lg:mb-[100px]">
+        {/* LEFT CONTENT */}
+        <div className="w-full md:w-[50%] p-6 sm:p-8 lg:p-20">
+          <div className="mb-10 sm:mb-16 lg:mb-[100px]">
             <Image
               src={logoImage}
               alt="Logo"
               width={50}
               height={48}
-              className="object-cover"
+              className="object-contain"
             />
           </div>
 
-          <div className="max-w-[100%]">{children}</div>
+          <div className="max-w-full">{children}</div>
         </div>
 
-        {/* <div className="w-full relative h-[450px] lg:h-[550px]"> */}
-        <div className="w-full h-[550px] relative">
+        {/* RIGHT BG IMAGE */}
+        <div className="w-full h-[300px] sm:h-[400px] md:h-[550px] relative">
           <Image
             src={bgImage}
             alt="Background Visual"
@@ -42,16 +45,26 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       </div>
 
-      <div className="absolute bottom-0 md:top-40 lg:bottom-0 right-0 xl:-right-21 z-20 w-[80%] md:w-[50%] xl:w-[800px] h-[450px]">
-        {/* <div className="absolute bottom-10 -right-90 z-20 w-full h-[80%]"> */}
+      {/* OVERLAY IMAGE */}
+      <div className="
+    absolute bottom-0 
+    md:top-40 
+    lg:bottom-0 
+    right-0 
+    xl:-right-20 
+    z-20 
+    w-[70%] sm:w-[60%] md:w-[50%] xl:w-[800px] 
+    h-[350px] sm:h-[400px] md:h-[450px]
+  ">
         <Image
           src={overlayImage}
           alt="Overlay Decoration"
           fill
-          className=" object-cover xl:object-contain rounded-tl-3xl"
+          className="object-contain rounded-tl-3xl"
         />
       </div>
     </div>
+
   );
   return href ? <Link href={href}>{cardContent}</Link> : cardContent;
 };

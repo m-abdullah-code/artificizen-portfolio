@@ -13,30 +13,44 @@ const BlogCard: React.FC<BlogCardProps> = ({
   href,
 }) => {
   return (
-    <>
-    <Link href={href} className="block hover:no-underline">
-    <div className="bg-white shadow-lg rounded-lg pb-5">
-      <div className="relative w-full" style={{ height }}>
-        <Image
-          src={image}
-          alt={`${heading} Image`}
-          fill
-          className="object-cover rounded-md"
-        />
-        <div className="absolute -bottom-3 left-0 bg-white p-2 rounded-tl-xl rounded-tr-xl rounded-br-xl">
-          <p className="text-xs text-gray-800">{date}</p>
+    <Link href={href} className="block hover:no-underline h-full">
+      <div className="bg-white rounded-[25px] shadow-sm h-full overflow-hidden border border-[#F2F2F2]">
+
+        {/* IMAGE */}
+        <div className="relative w-full" style={{ height }}>
+          <Image
+            src={image}
+            alt={heading}
+            fill
+            className="object-cover rounded-[25px]"
+          />
+
+          {/* DATE TAG */}
+          <div className="absolute -bottom-3 left-0 bg-white rounded-2xl px-3 sm:px-4 py-1.5 flex items-center">
+            <p className="text-xs sm:text-sm font-medium text-[#9B9B9B] leading-normal">{date}</p>
+          </div>
         </div>
+
+        {/* CONTENT */}
+        <div className="px-4 sm:px-6 pt-8 sm:pt-10 pb-5 sm:pb-6">
+          <h3 className="text-lg sm:text-2xl font-normal text-[#111111] leading-snug">
+            {heading}
+          </h3>
+
+          {content && (
+            <p className="text-sm sm:text-base text-[#333333] font-normal leading-snug mt-1.5 sm:mt-2.5">
+              {content}
+            </p>
+          )}
+
+          <p className="text-xs sm:text-sm text-[#9B9B9B] leading-normal font-medium mt-3 sm:mt-5">
+            {links.join(" / ")}
+          </p>
+        </div>
+
       </div>
-      <div className="md:px-10">
-        <p className="text-[clamp(1.25rem, 2vw, 1.5rem)] font-semibold mt-4">
-          {heading}
-        </p>
-        <p className="text-black mt-2 text-base">{content}</p>
-        <p className="text-sm mt-5 text-gray-600">{links.join(" / ")}</p>
-      </div>
-    </div>
     </Link>
-    </>
+
   );
 };
 

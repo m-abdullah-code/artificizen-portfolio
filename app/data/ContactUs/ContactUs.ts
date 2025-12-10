@@ -1,7 +1,7 @@
 import { ContactUsPageData } from "@/app/interfaces/ContactUs";
 import Contact from "../../../public/assets/ContactUs/contactMain.png";
 import Elipse from "../../../public/assets/Footer/Ellipse 1.png";
-import Alogo from "../../../public/assets/logo/Artificizen-Logo.png";
+import Alogo from "../../../public/assets/logo/Artificizen-logo.svg";
 import WhiteIcon from "../../../public/assets/Icons/WLeftIcon.png";
 
 export const contactUsData: ContactUsPageData = {
@@ -14,7 +14,7 @@ export const contactUsData: ContactUsPageData = {
     topText: "/get in touch /",
     headings: ["We are always ready to help you and answer your questions"],
     description:
-      "Let’s collaborate to bring your AI vision to life with speed and precision.",
+      "Let’s talk. We’ll help you shape the right solution — fast, focused, and built to scale.",
     contactInfo: {
       callCenter: {
         title: "Contact Us",

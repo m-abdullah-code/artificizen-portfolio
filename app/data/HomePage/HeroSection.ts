@@ -23,13 +23,13 @@ export const heroData: HeroData = {
     "From MVPs to full-scale SaaS platforms, we design, build, and deploy custom AI solutions that are fast, scalable, and built to grow with your business. No bloated teams, no vague timelines. Just powerful, reliable AI products that work from day one.",
   ctas: [
     {
-      href: "/",
-      label: "Book a free consultation",
+      href: "/contact-us",
+      label: "Book a Free Consultation",
       primary: true,
       style: "bg-blue-600 hover:bg-blue-700 text-white",
     },
     {
-      href: "/portfolio",
+      href: "/case-study",
       label: "See Our Work",
       primary: false,
       style:

@@ -1,5 +1,5 @@
 import { ChooseUsData } from "@/app/interfaces/ChooseUs";
-import ChooseUs from "../../../public/assets/WhyChooseUs/chooseImage.png";
+import ChooseUs from "../../../public/assets/WhyChooseUs/chooseImage.svg";
 export const chooseUsData: ChooseUsData = {
   main: {
     label: "/ Why Choose Us /",
@@ -40,10 +40,10 @@ export const chooseUsData: ChooseUsData = {
         "Achieved a 95% customer satisfaction rate across all AI solutions.",
     },
     stat2: {
-      value: "$2mil",
+      value: "$10mil",
       label: "Cost Savings",
       description:
-        "Delivered over $2 million in cost savings for clients through optimized AI solutions.",
+        "Delivered over $10 million in cost savings for clients through optimized AI solutions.",
     },
   },
 };

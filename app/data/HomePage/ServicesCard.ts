@@ -1,13 +1,13 @@
 import { SectionData } from "@/app/interfaces/Card";
-import Vector from "../../../public/assets/CardVector/Vector.png";
-import Vector2 from "../../../public/assets/CardVector/Vector (1).png";
-import Vector3 from "../../../public/assets/CardVector/Group.png";
-import Vector4 from "../../../public/assets/CardVector/batch-processing_4380508 1.png";
-import Vector5 from "../../../public/assets/CardVector/infrastructure_3043474 1.png";
-import Vector6 from "../../../public/assets/CardVector/batch-processing_4380508 1.png";
-import Vector7 from "../../../public/assets/CardVector/app-development_2335265 1.png";
-import Vector8 from "../../../public/assets/CardVector/025---Website-UX.png";
-import Vector9 from "../../../public/assets/CardVector/Layer_x0020_1.png";
+import Vector from "../../../public/assets/CardVector/service-1.svg";
+import Vector2 from "../../../public/assets/CardVector/service-2.svg";
+import Vector3 from "../../../public/assets/CardVector/service-3.svg";
+import Vector4 from "../../../public/assets/CardVector/service-4.svg";
+import Vector5 from "../../../public/assets/CardVector/service-5.svg";
+import Vector6 from "../../../public/assets/CardVector/service-6.svg";
+import Vector7 from "../../../public/assets/CardVector/service-7.svg";
+import Vector8 from "../../../public/assets/CardVector/service-8.svg";
+import Vector9 from "../../../public/assets/CardVector/service-9.svg";
 
 export const servicesData: SectionData = {
   cards: [
@@ -30,7 +30,7 @@ export const servicesData: SectionData = {
       content:
         "Validate your business concept quickly and efficiently with our POC and MVP development services.",
       image: Vector3,
-      href: "/services/mvp-development",
+      href: "/services/poc-mvp-development",
     },
     {
       heading: "Enterprise AI Automation",

@@ -6,6 +6,7 @@ export interface CarouselData {
   testimonial: {
     label: string;
     heading: string;
+    names: string[];
     stat: {
       value: string;
       label: string;
