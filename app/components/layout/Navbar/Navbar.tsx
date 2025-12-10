@@ -93,7 +93,7 @@ export default function Navigation() {
       className="fixed top-0 left-0 right-0 z-50 px-6"
     >
       <div
-        className={`max-w-[1360px] mx-auto ${pathname === "/" ? "bg-transparent" : "bg-black"
+        className={`max-w-[1360px] mx-auto ${pathname === "/" ? "bg-transparent" : "bg-black px-5"
           } ${isMobileMenuOpen ? "rounded-none" : "rounded-full"}`}
       >
         <div className="flex items-center justify-between py-5 min-h-[80px]">
@@ -127,23 +127,23 @@ export default function Navigation() {
                 <Link
                   href={item.href}
                   className={`
-                    flex items-center space-x-1 text-sm font-bold transition-colors px-4 py-3 rounded-4xl hover:bg-white
-                    ${pathname === "/"
+    flex items-center space-x-1 text-sm font-bold transition-colors px-4 py-3 rounded-4xl hover:bg-white
+    ${pathname === "/"
                       ? isScrolled
-                        ? "text-[var(--text-primary-color)] hover:text-white hover:!bg-black"
+                        ? "text-black hover:text-white hover:!bg-black"
                         : "text-white hover:text-[var(--text-primary-color)]"
-                      : "text-[var(--text-primary-color)] hover:text-white hover:!bg-black"
+                      : "text-white hover:!bg-black"
                     }
-                  `}
+  `}
                 >
                   <span>{item.label}</span>
                   {item.hasDropdown && (
-                    <motion.div
-                    >
+                    <motion.div>
                       <MdOutlineArrowDropDown className="w-4 h-4 -rotate-40" />
                     </motion.div>
                   )}
                 </Link>
+
 
                 {/* Dropdown Menu */}
                 <AnimatePresence>

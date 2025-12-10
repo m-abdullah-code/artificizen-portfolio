@@ -6,7 +6,7 @@ import Link from "next/link";
 const ServicesSection = ({ data }: { data: SectionData }) => {
 
   return (
-    <section className="px-4 sm:px-6 py-10 sm:py-12">
+    <section id="next-section" className="px-4 sm:px-6 py-10 sm:py-12">
       <div className="max-w-[1360px] mx-auto">
         <div className="max-w-5xl">
 

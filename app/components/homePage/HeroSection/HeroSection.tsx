@@ -19,6 +19,14 @@ export default function HeroSection() {
     },
   };
 
+  // Smooth scroll function
+  const scrollToNextSection = () => {
+    const nextSection = document.getElementById("next-section");
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section
       className="
@@ -79,8 +87,8 @@ export default function HeroSection() {
               <span
                 key={index}
                 className={`block ${index === 2
-                    ? "bg-gradient-to-r from-[#0B5CFF99] to-[#FF710C] bg-clip-text text-transparent"
-                    : "text-white"
+                  ? "bg-gradient-to-r from-[#0B5CFF99] to-[#FF710C] bg-clip-text text-transparent"
+                  : "text-white"
                   } mb-1`}
               >
                 {line}
@@ -151,7 +159,8 @@ export default function HeroSection() {
 
           {/* Scroll Indicator */}
           <motion.div
-            className="absolute bottom-0 right-5 hidden lg:block"
+            onClick={scrollToNextSection}
+            className="absolute bottom-0 right-5 hidden lg:block cursor-pointer"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.6 }}
