@@ -9,4 +9,5 @@ const Empathicapage = () => {
   );
 };
 
+
 export default Empathicapage;
