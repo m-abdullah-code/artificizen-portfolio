@@ -473,3 +473,70 @@ body {
   bottom: -40%;
   z-index: 1;
 }
+
+
+
+/* About page slider */
+
+/* Perfect Infinite Ticker - No Gap, No Jump */
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  display: flex;
+  animation: ticker 15s linear infinite;
+}
+
+/* Optional: Pause on hover */
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+
+/* About page: Banner secting tag */
+.banner_tag::before {
+  content: "";
+  background: url("../public/assets/AboutUs/tag_left.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 20px;
+  height: 40px;
+  left: -20px;
+  bottom: 12px;
+  position: absolute;
+  z-index: 31;
+}
+
+.banner_tag::after {
+  content: "";
+  background: url("../public/assets/AboutUs/tag_right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 20px;
+  height: 40px;
+  right: -20px;
+  bottom: 12px;
+  position: absolute;
+  z-index: 31;
+}
+
+@media (max-width: 640px) {
+  .banner_tag::after {
+    bottom: 7px;
+    right: -19px;
+  }
+
+  .banner_tag::before {
+    bottom: 7px;
+    left: -19px;
+  }
+}

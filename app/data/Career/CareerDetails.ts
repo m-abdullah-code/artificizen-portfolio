@@ -1,5 +1,5 @@
 import { PageData } from "@/app/interfaces/CareerDetailPage";
-import Career from "../../../public/assets/career/careerM.png";
+import Career from "../../../public/assets/career/careerBanner.webp";
 import SideImage from "../../../public/assets/CaseStudy/2ndCardbg.jpg.png";
 
 // Data for the page

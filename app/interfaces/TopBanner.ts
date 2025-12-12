@@ -4,6 +4,7 @@ export interface TopBannerCardProps {
   imageSrc: StaticImageData | string;
   title: string;
   description: string;
+  breadcrumb?: string[];
 }
 
 export interface TopBannerData {

@@ -6,11 +6,13 @@ import React from "react";
 
 export default function CareerPage() {
   return (
-    <div className="container max-w-full">
+    <div className="">
+      {/* Career Banner */}
       <TopBannerCard
         imageSrc={careerData.banner.image}
         title={careerData.banner.title}
         description={careerData.banner.description}
+        breadcrumb={["Home", "Careers"]}
       />
 
       <TableComponent rows={careerData.rows} />

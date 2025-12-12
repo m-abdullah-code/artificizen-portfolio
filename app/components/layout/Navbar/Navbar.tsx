@@ -93,8 +93,8 @@ export default function Navigation() {
       className="fixed top-0 left-0 right-0 z-50 px-6"
     >
       <div
-        className={`max-w-[1360px] mx-auto ${pathname === "/" ? "bg-transparent" : "bg-black px-5"
-          } ${isMobileMenuOpen ? "rounded-none" : "rounded-full"}`}
+        className={`max-w-[1360px] mx-auto relative top-5 ${pathname === "/" ? "bg-transparent !top-0" : "bg-black px-5"
+          } ${isMobileMenuOpen ? "rounded-none" : "rounded-3xl"}`}
       >
         <div className="flex items-center justify-between py-5 min-h-[80px]">
           {/* Logo */}
@@ -132,7 +132,7 @@ export default function Navigation() {
                       ? isScrolled
                         ? "text-black hover:text-white hover:!bg-black"
                         : "text-white hover:text-[var(--text-primary-color)]"
-                      : "text-white hover:!bg-black"
+                      : "text-white hover:!bg-white hover:text-black"
                     }
   `}
                 >
