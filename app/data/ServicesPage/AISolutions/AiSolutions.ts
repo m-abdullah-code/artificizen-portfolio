@@ -1,4 +1,4 @@
-import Services from "../../../../public/assets/Services/Services.png";
+import Services from "../../../../public/assets/Services/servicesBanner.webp";
 import { ServicesCardData } from "../../../interfaces/ServicesPage";
 
 export const serviceData: ServicesCardData = {

@@ -34,7 +34,7 @@ const TopBannerCard = ({ imageSrc, title, description, breadcrumb }: TopBannerCa
         />
 
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/40 z-0 rounded-3xl"></div>
+        {/* <div className="absolute inset-0 bg-black/40 z-0 rounded-3xl"></div> */}
 
         {/* Text Content */}
         <div className="relative z-10 flex flex-col justify-center h-[300px] sm:h-[400px] lg:h-[500px] px-4 sm:px-8 lg:px-12 text-white lg:max-w-[65%]">

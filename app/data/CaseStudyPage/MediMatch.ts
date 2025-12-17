@@ -1,10 +1,10 @@
-import Background from "../../../public/assets/CaseStudy/CaseStudiesBg1.png";
-import CardImage from "../../../public/assets/CaseStudy/caseStudiesLaw.png";
-import SecondCard from "../../../public/assets/CaseStudy/2ndCardbg.jpg.png";
-import Overview from "../../../public/assets/CaseStudy/overview.png";
-import Nelson1 from "../../../public/assets/CaseStudy/Nelson1.png";
-import Nelson2 from "../../../public/assets/CaseStudy/Nelson2.png";
-import Vector from "../../../public/assets/CaseStudy/Vector.png";
+import Background from "../../../public/assets/CaseStudy/CaseStudiesBg1.webp";
+import CardImage from "../../../public/assets/CaseStudy/caseStudiesLaw.svg";
+import SecondCard from "../../../public/assets/CaseStudy/sidebar_img.webp";
+import Overview from "../../../public/assets/CaseStudy/overview.webp";
+import Nelson1 from "../../../public/assets/CaseStudy/Nelson1.webp";
+import Nelson2 from "../../../public/assets/CaseStudy/Nelson2.webp";
+import Vector from "../../../public/assets/CaseStudy/Vector.svg";
 import { CaseStudiesData } from "../../interfaces/CaseStudyPage"; // Adjust path
 import { caseStudyData } from "./CasseStudyPage";
 

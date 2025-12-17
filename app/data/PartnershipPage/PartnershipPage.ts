@@ -1,7 +1,7 @@
 import { BYCPageData } from "@/app/interfaces/PartnershipPage";
 import BycImage from "../../../public/assets/Byc/byc main.png";
 import Left1 from "../../../public/assets/Byc/byc1.png";
-import Group from "../../../public/assets/Services/Group.png";
+import Group from "../../../public/assets/Services/waves.svg";
 import WhiteIcon from "../../../public/assets/Icons/WLeftIcon.png";
 import Byc2 from "../../../public/assets/Byc/byc2.jpg";
 

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import { carouselData } from "@/app/data/HomePage/Testimonials";
 import { FaPlay, FaArrowLeft, FaArrowRight } from "react-icons/fa";
@@ -53,7 +53,7 @@ const TestimonialSection = () => {
       } else setCounterValue(current);
     }, 30);
     return () => clearInterval(interval);
-  }, [isInView]);
+  }, [isInView, targetValue]);
 
   /* Re-enable transition after reset */
   useEffect(() => {
@@ -74,9 +74,9 @@ const TestimonialSection = () => {
   };
 
   /* Navigation */
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prev) => Math.min(slides.length - 1, prev + 1));
-  };
+  }, [slides.length]);
   const prevSlide = () => {
     setCurrentIndex((prev) => Math.max(0, prev - 1));
   };
@@ -86,7 +86,7 @@ const TestimonialSection = () => {
     if (!playing) return;
     const interval = setInterval(nextSlide, 2500);
     return () => clearInterval(interval);
-  }, [playing]);
+  }, [playing, nextSlide]);
 
   return (
     <section ref={componentRef} className="w-full py-10 px-4 sm:px-6">

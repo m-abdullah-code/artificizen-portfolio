@@ -2,7 +2,9 @@ import { StaticImageData } from "next/image";
 
 // Interface for blog post data (used in SideRecentPost)
 export interface BlogPost {
+  id: number;
   date: string;
+  blog_name: string;
   title: string;
   image: StaticImageData;
 }
@@ -41,6 +43,9 @@ export interface BlogContent {
   additionalParagraph: string;
   socialTags: string[];
   image?: StaticImageData;
+  date: string;
+  blog_name: string;
+  tags: string[];
 }
 
 // Main data structure

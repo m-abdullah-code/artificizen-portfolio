@@ -1,14 +1,14 @@
 import { ServicesPageData } from "@/app/interfaces/ServicesPages";
-import Main from "../../../../public/assets/Services/mvpBg.jpg";
-import Banner from "../../../../public/assets/Services/mvpMain.png";
-import BgCard from "../../../../public/assets/Services/bgCard2.jpg";
-import Left from "../../../../public/assets/Icons/WRightIcon.png";
-import Right from "../../../../public/assets/Icons/WLeftIcon.png";
-import Group from "../../../../public/assets/Services/Group.png";
+import Main from "../../../../public/assets/Services/mvpBg.webp";
+import Banner from "../../../../public/assets/Services/mvpMain.webp";
+import BgCard from "../../../../public/assets/Services/bgCard2.webp";
+import Left from "../../../../public/assets/Icons/wRightArrow.svg";
+import Right from "../../../../public/assets/Icons/wLeftArrow.svg";
+import Group from "../../../../public/assets/Services/waves.svg";
 
 export const serviceData: ServicesPageData = {
   banner: {
-    image: Banner,
+    image: Main,
     heading: "POC/MVP Development",
     content: "Powerful AI solutions tailored to transform your business",
   },
@@ -24,6 +24,7 @@ export const serviceData: ServicesPageData = {
       servicesList: [
         "AI Chatbots",
         "AI SAAS Development",
+        "PoC MVP Development",
         "Enterprise AI Automation",
         "Cloud Infrastructure",
         "Full Stack Web Development",
@@ -34,6 +35,7 @@ export const serviceData: ServicesPageData = {
       servicesUrls: [
         "/services/chatbot-solutions",
         "/services/saas-development",
+        "/services/poc-mvp-development",
         "/services/ai-automation",
         "/services/cloud-infrastructure",
         "/services/web-development",
@@ -69,7 +71,7 @@ export const serviceData: ServicesPageData = {
     subheading: "Validating Innovation",
     content:
       "In today's fast-moving business environment, bringing innovative ideas to market quickly can mean the difference between success and irrelevance. Artificizen specializes in rapid Proof of Concept (POC) and Minimum Viable Product (MVP) development, helping businesses validate concepts, test market fit, and secure stakeholder buy-in before committing to full-scale development.",
-    image: Main,
+    image: Banner,
     trends: {
       title: "Approach",
       subheading: "Strategic ",
@@ -206,14 +208,14 @@ export const serviceData: ServicesPageData = {
           text: "Explore more",
           className:
             "mt-10 rounded-full p-2 px-5 border border-white flex items-center gap-2 cursor-pointer",
-          icon: Right,
+          icon: Left,
           link: "/blog",
         },
         {
           text: "",
           className:
             "border border-white rounded-full p-2 px-5 mt-10 flex items-center gap-2",
-          icon: Left,
+          icon: Right,
         },
       ],
     },

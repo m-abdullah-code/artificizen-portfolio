@@ -12,20 +12,20 @@ import Footer from "@/app/components/layout/Footer/Footer";
 const Services = () => {
   return (
     <>
-      <div className="container max-w-full">
+      <div className="">
         <TopBannerCard
           imageSrc={serviceData.image}
           title={serviceData.heading}
-          description={serviceData.content}
+          description={serviceData.content} 
         />
       </div>
-      <div className="mt-10">
+      <div className="px-4 sm:px-6 py-10 sm:py-12">
         <ServicesSection data={servicesData} />
       </div>
-      <div className="mt-10">
+      <div className="px-4 sm:px-6 py-10 sm:py-12">
         <BlogSection data={blogSectionData} />
       </div>
-      <div className="mt-10">
+      <div className="px-4 sm:px-6 py-10 sm:py-12">
         <StorySection data={storySectionData} />
       </div>
       <div>

@@ -529,6 +529,20 @@ body {
   z-index: 31;
 }
 
+.blog_tag::before {
+  content: "";
+  background: url("../public/assets/Blog/blog_tag.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 20px;
+  height: 40px;
+  right: -20px;
+  bottom: 12px;
+  position: absolute;
+  z-index: 31;
+}
+
 @media (max-width: 640px) {
   .banner_tag::after {
     bottom: 7px;
@@ -539,4 +553,10 @@ body {
     bottom: 7px;
     left: -19px;
   }
+
+  .blog_tag::before {
+    bottom: 0;
+    right: -19px;
+  }
+  
 }

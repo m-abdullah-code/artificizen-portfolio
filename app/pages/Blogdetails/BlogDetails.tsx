@@ -8,19 +8,27 @@ import Footer from "@/app/components/layout/Footer/Footer";
 import Image from "next/image";
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { blogDetailsData } from "@/app/data/BlogPage/Blogdetails";
+// import { div } from "framer-motion/client";   
+import shareIcon from "../../../public/assets/Icons/shareIcon.svg";
 
 const BlogDetails = () => {
   return (
-    <div className="container max-w-full">
+    <div className="">
       <TopBannerCard
         imageSrc={blogDetailsData.banner.image}
         title={blogDetailsData.banner.title}
         description={blogDetailsData.banner.description}
+        breadcrumb={["Home", "Blogs Details"]}
       />
-      <div className="py-8">
+
+      <div className="px-4 sm:px-6 py-10 sm:py-12">
+        <div className="max-w-[1360px] mx-auto">
+
         <div className="flex flex-col md:flex-row gap-4">
           {/* Left Column */}
           <div className="w-full md:w-[75%] rounded space-y-5">
+
+            <div className="relative">
             <Image
               src={
                 blogDetailsData.content.image || blogDetailsData.banner.image
@@ -28,6 +36,39 @@ const BlogDetails = () => {
               alt="Example"
               className="w-full rounded"
             />
+
+            {/* Blog Tag */}
+            <div className="flex items-center gap-2 absolute -bottom-2 sm:-bottom-3 left-0 z-30">
+              <div
+                className="
+                relative
+                bg-white 
+                py-1.5 md:py-4 
+                px-4 md:px-7 
+                flex items-center gap-2 
+                text-[#9B9B9B] 
+                rounded-t-xl md:rounded-t-3xl blog_tag
+              "
+              >
+                <p className="text-xs md:text-sm">{blogDetailsData.content.date}</p>
+                <span>/</span>
+                <p className="text-xs md:text-sm">{blogDetailsData.content.blog_name}</p>
+              </div>
+
+              <div className="flex gap-2 mb-2">
+                {blogDetailsData.content.tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className="bg-[#F0F2F4] text-[#111111] text-xs md:text-sm px-3 py-2 rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            </div>
+              
             {blogDetailsData.content.mainParagraphs.map((paragraph, index) => (
               <p
                 key={index}
@@ -39,14 +80,14 @@ const BlogDetails = () => {
               </p>
             ))}
 
-            <div className="bg-gray-200 p-5 md:p-10 rounded-lg flex gap-5">
+            <div className="bg-[#F0F2F4] py-10 px-5 md:py-15 md:px-10 rounded-2xl flex gap-5">
               <Image
                 src={blogDetailsData.content.quote.image}
                 alt="Example"
                 className="w-5 h-5 mb-3"
               />
               <div>
-                <p className="text-black text-sm md:text-base lg:text-xl leading-relaxed font-semibold">
+                <p className="text-[#333333] text-sm md:text-base lg:text-xl leading-relaxed font-semibold">
                   {blogDetailsData.content.quote.text}
                 </p>
                 <p className="mb-2 text-gray-500 text-base">
@@ -54,7 +95,7 @@ const BlogDetails = () => {
                 </p>
               </div>
             </div>
-            <div className="text-base text-black mt-5">
+            <div className="text-base text-[#333333] mt-10">
               {blogDetailsData.content.additionalParagraph}
             </div>
             <div className="space-y-2 mt-16">
@@ -113,7 +154,7 @@ const BlogDetails = () => {
               ))}
             </div>
 
-            <div className="bg-gray-200 p-2 md:p-10">
+            <div className="bg-[#F0F2F4] py-10 px-5 md:py-15 md:px-10 mt-15 rounded-3xl">
               {/* Title & Description */}
               <p className="text-[clamp(1.25rem,2vw,1.75rem)]">
                 Leave a Comment
@@ -130,12 +171,12 @@ const BlogDetails = () => {
                   <input
                     type="text"
                     placeholder="Full Name"
-                    className="flex-1 bg-transparent border-b border-gray-400 focus:outline-none placeholder-gray-500"
+                    className="flex-1 bg-transparent border-b border-[#9B9B9B] focus:outline-none placeholder-[#9B9B9B]"
                   />
                   <input
                     type="email"
                     placeholder="Email"
-                    className="flex-1 bg-transparent border-b border-gray-400 focus:outline-none placeholder-gray-500"
+                    className="flex-1 bg-transparent border-b border-[#9B9B9B] focus:outline-none placeholder-[#9B9B9B]"
                   />
                 </div>
 
@@ -143,7 +184,7 @@ const BlogDetails = () => {
                 <textarea
                   placeholder="Message"
                   rows={4}
-                  className="w-full bg-transparent border-b border-gray-400 focus:outline-none placeholder-gray-500"
+                  className="w-full bg-transparent border-b border-[#9B9B9B] focus:outline-none placeholder-[#9B9B9B]"
                 />
 
                 {/* Bottom Row: Text Box + Text + Button */}
@@ -152,15 +193,20 @@ const BlogDetails = () => {
                     <input
                       type="checkbox"
                       placeholder="Your Website"
-                      className="bg-transparent border-b border-gray-400 focus:outline-none placeholder-gray-500 w-full md:w-auto"
+                      className="bg-transparent border-b border-[#9B9B9B] focus:outline-none placeholder-[#9B9B9B] w-full md:w-auto"
                     />
-                    <span className="text-gray-600 text-base">
+                    <span className="text-[#9B9B9B] text-base">
                       Save my name, email, and website in this browser for the
                       next time I comment.
                     </span>
                   </div>
                 </div>
-                <button className="bg-black text-white text-sm px-6 py-2 rounded-full">
+                <button className="bg-[#333333] text-white text-sm px-6 py-3 rounded-full cursor-pointer flex items-center gap-2 justify-center">
+                  <Image
+                    src={shareIcon}
+                    alt="Send"
+                    className=""
+                  />
                   Send a message
                 </button>
               </div>
@@ -189,6 +235,7 @@ const BlogDetails = () => {
               content={blogDetailsData.sideCard.content}
             />
           </div>
+        </div>
         </div>
       </div>
       <Footer

@@ -1,12 +1,12 @@
-import Background from "../../../public/assets/Blog/blogMain.png";
-import B1 from "../../../public/assets/Blog/b1.png";
-import B2 from "../../../public/assets/Blog/b2.png";
-import B3 from "../../../public/assets/Blog/b3.png";
-import B4 from "../../../public/assets/Blog/b4.png";
-import SideImage from "../../../public/assets/CaseStudy/2ndCardbg.jpg.png";
-import S1 from "../../../public/assets/Blog/s1.png";
-import S2 from "../../../public/assets/Blog/s2.png";
-import S3 from "../../../public/assets/Blog/s3.jpg";
+import Background from "../../../public/assets/Blog/blogBanner.webp";
+import B1 from "../../../public/assets/Blog/b1.webp";
+import B2 from "../../../public/assets/Blog/b2.webp";
+import B3 from "../../../public/assets/Blog/b3.webp";
+import B4 from "../../../public/assets/Blog/b4.webp";
+import SideImage from "../../../public/assets/CaseStudy/sidebar_img.webp";
+import S1 from "../../../public/assets/Blog/s1.webp";
+import S2 from "../../../public/assets/Blog/s2.webp";
+import S3 from "../../../public/assets/Blog/s3.webp";
 import Icon from "../../../public/assets/Icons/BLeftIcon.png";
 import { BlogPageData } from "@/app/interfaces/BlogPage";
 
@@ -54,6 +54,8 @@ export const blogData: BlogPageData = {
     {
       id: 1,
       image: B1,
+      date: "12-Feb-2024",
+      blog_name: "andrew",
       heading:
         "How can I get started with Artificial Intelligence for my business?",
       content:
@@ -63,6 +65,8 @@ export const blogData: BlogPageData = {
     {
       id: 2,
       image: B2,
+      date: "12-Feb-2024",
+      blog_name: "andrew",
       heading: "The Future of AI: Emerging Trends and Technologies to Watch",
       content:
         "In today’s fast-paced and data-driven world, businesses are constantly seeking innovative ways to gain a competitive edge, make smarter decisions, and deliver exceptional customer experiences. One technology that",
@@ -71,6 +75,8 @@ export const blogData: BlogPageData = {
     {
       id: 3,
       image: B3,
+      date: "12-Feb-2024",
+      blog_name: "andrew",
       heading:
         "Exploring Deep Learning: Unleashing the Power of Neural Networks",
       content:
@@ -80,6 +86,8 @@ export const blogData: BlogPageData = {
     {
       id: 4,
       image: B4,
+      date: "12-Feb-2024",
+      blog_name: "andrew",
       heading:
         "How Natural Language Processing is revolutionizing Text Analysis",
       content:
