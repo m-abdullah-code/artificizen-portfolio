@@ -24,7 +24,7 @@ const ServicesPages = ({ data }: { data: ServicesPageData }) => {
         <div className="py-8">
           <div className="flex flex-col md:flex-row gap-4">
             {/* Left Column (Cards) */}
-            <div className="w-full md:w-[25%] flex flex-col gap-4">
+            <div className="w-full md:w-[25%] flex flex-col gap-4 sticky-column">
               {data.sidebarCards.map((card, index) => (
                 <div
                   key={index}

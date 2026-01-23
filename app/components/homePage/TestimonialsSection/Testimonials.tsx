@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { carouselData } from "@/app/data/HomePage/Testimonials";
-import { FaPlay, FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 // import CenterMode from "../../slickTestimonial/page";
 
 
@@ -129,12 +129,12 @@ const TestimonialSection = () => {
                   <p className="absolute -right-8 sm:-right-10 bottom-12 sm:bottom-20 -rotate-90 text-white text-[20px] sm:text-[38px] font-semibold whitespace-nowrap z-30">
                     {names[index]}
                   </p>
-                  <button
+                  {/* <button
                     onClick={() => setPlaying((prev) => !prev)}
                     className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full p-3 sm:p-5 shadow-2xl hover:scale-105 transition-all duration-200 cursor-pointer"
                   >
                     <FaPlay className="text-black text-lg sm:text-xl" />
-                  </button>
+                  </button> */}
                 </div>
               ))}
             </div>

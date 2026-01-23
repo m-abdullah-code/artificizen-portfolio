@@ -40,7 +40,7 @@ const StorySection = ({ data }: { data: StorySectionData }) => {
         {/* ROW 1: Left to Right */}
         {row1.length > 0 && (
           <div className="mt-8 overflow-hidden">
-            <div className="flex animate-marquee-ltr whitespace-nowrap">
+            <div className="flex review-marquee-ltr whitespace-nowrap">
               {row1.map((card, i) => (
                 <div key={`row1-${i}`} className="px-2 sm:px-3 flex-shrink-0 w-[260px] sm:w-[300px] lg:w-[325px]">
                   <StoryCard {...card} />
@@ -53,7 +53,7 @@ const StorySection = ({ data }: { data: StorySectionData }) => {
         {/* ROW 2: Right to Left */}
         {row2.length > 0 && (
           <div className="mt-6 overflow-hidden">
-            <div className="flex animate-marquee-rtl whitespace-nowrap">
+            <div className="flex review-marquee-rtl whitespace-nowrap">
               {row2.map((card, i) => (
                 <div key={`row2-${i}`} className="px-2 sm:px-3 flex-shrink-0 w-[260px] sm:w-[300px] lg:w-[325px]">
                   <StoryCard {...card} />
@@ -66,7 +66,7 @@ const StorySection = ({ data }: { data: StorySectionData }) => {
         {/* ROW 3: Left to Right */}
         {row3.length > 0 && (
           <div className="mt-6 overflow-hidden">
-            <div className="flex animate-marquee-ltr whitespace-nowrap">
+            <div className="flex review-marquee-ltr whitespace-nowrap">
               {row3.map((card, i) => (
                 <div key={`row3-${i}`} className="px-2 sm:px-3 flex-shrink-0 w-[260px] sm:w-[300px] lg:w-[325px]">
                   <StoryCard {...card} />

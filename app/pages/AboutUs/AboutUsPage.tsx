@@ -90,7 +90,7 @@ const AboutUsPage = () => {
         />
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-8 items-start">
+      <div className="flex flex-col lg:flex-row gap-8 items-start mt-15">
         {/* Left Column */}
         <div className="w-full lg:w-[45%]">
           <p className="text-base">/ team /</p>
