@@ -1,13 +1,13 @@
 import { TopBannerData } from "@/app/interfaces/TopBanner";
-import C1 from "../../../public/assets/CaseStudy/c1.png";
-import C2 from "../../../public/assets/CaseStudy/c2.png";
-import C3 from "../../../public/assets/CaseStudy/c3.png";
-import C4 from "../../../public/assets/CaseStudy/c4.png";
-import C5 from "../../../public/assets/CaseStudy/c5.png";
-import C6 from "../../../public/assets/CaseStudy/c6.png";
+import C1 from "../../../public/assets/CaseStudy/c1.webp";
+import C2 from "../../../public/assets/CaseStudy/c2.webp";
+import C3 from "../../../public/assets/CaseStudy/c3.webp";
+import C4 from "../../../public/assets/CaseStudy/c4.webp";
+import C5 from "../../../public/assets/CaseStudy/c5.webp";
+import C6 from "../../../public/assets/CaseStudy/c6.webp";
 import { CaseStudyCardData } from "@/app/interfaces/CaseStudyCard";
 import { FooterContent } from "@/app/interfaces/Footer";
-import CaseStudy from "../../../public/assets/CaseStudy/CaseStudiesBg1.png";
+import CaseStudy from "../../../public/assets/CaseStudy/CaseStudiesBg1.webp";
 
 export interface CaseStudyData {
   topBanner: TopBannerData;

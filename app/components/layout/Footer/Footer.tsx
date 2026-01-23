@@ -12,6 +12,7 @@ import { footerData } from "../../../data/Footer";
 import { IconKey, FooterData } from "../../../interfaces/Footer";
 import { IconType } from "react-icons";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import emailjs from "@emailjs/browser";
 import { contactUsData } from "@/app/data/ContactUs/ContactUs";
 
@@ -38,6 +39,7 @@ const Footer: React.FC<FooterProps> = ({
   gradientWordCount = 1,
 }) => {
   const typedFooterData: FooterData = footerData;
+  const pathname = usePathname();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -92,7 +94,9 @@ const Footer: React.FC<FooterProps> = ({
     <footer className="mt-15 px-4 sm:px-6 md:px-10 lg:px-12">
       <div className="bg-[#1F1F1F] max-w-[1360px] mx-auto text-white rounded-3xl relative overflow-hidden bg_overlay">
         <div className="p-5 sm:p-8 md:p-10 relative z-10">
-          <div className="flex flex-col lg:flex-row justify-between max-w-full mx-auto gap-10 lg:gap-5">
+          {!pathname?.includes("/contact-us") && (
+            <>
+              <div className="flex flex-col lg:flex-row justify-between max-w-full mx-auto gap-10 lg:gap-5">
 
             {/* Left side footer */}
             <div className="w-full lg:max-w-[50%]">
@@ -192,8 +196,11 @@ const Footer: React.FC<FooterProps> = ({
               )}
             </div>
           </div>
+         
 
-          <hr className="mt-12" />
+              <hr className="mt-12" />
+            </>
+           )}
 
           {/* Footer Columns Section */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-10 mt-10">

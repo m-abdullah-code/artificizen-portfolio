@@ -1,6 +1,6 @@
 import { BlogSectionData } from "@/app/interfaces/BlogCard";
-import Robot from "../../../../public/assets/Services/Robot.png";
-import Machine from "../../../../public/assets/Services/machine.png";
+import Robot from "../../../../public/assets/Services/robot.webp";
+import Machine from "../../../../public/assets/Services/machine.webp";
 import Tower from "../../../../public/assets/Services/Tower.png";
 
 export const blogSectionData: BlogSectionData = {

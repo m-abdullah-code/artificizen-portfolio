@@ -3,7 +3,7 @@ import BlogDetails from "../pages/Blogdetails/BlogDetails";
 
 const page = () => {
   return (
-    <div className="p-5 mt-20">
+    <div className="">
       <BlogDetails />
     </div>
   );

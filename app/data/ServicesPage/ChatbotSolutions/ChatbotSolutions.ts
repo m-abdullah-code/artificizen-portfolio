@@ -1,19 +1,19 @@
 import { ServicesPageData } from "@/app/interfaces/ServicesPages";
 // import Vector from "../../../public/assets/Services/arrowvectorw.png";
-import Main from "../../../../public/assets/Services/mainBG.jpg";
-import Banner from "../../../../public/assets/Services/servicCchatbot.png";
+import Main from "../../../../public/assets/Services/mainBG.webp";
+import Banner from "../../../../public/assets/Services/chatbotBanner.webp";
 // import BulletIcon from "../../../public/assets/CaseStudy/Icon.png";
-import BgCard from "../../../../public/assets/Services/bgCard2.jpg";
-import Left from "../../../../public/assets/Icons/WRightIcon.png";
-import Right from "../../../../public/assets/Icons/WLeftIcon.png";
-import Group from "../../../../public/assets/Services/Group.png";
+import BgCard from "../../../../public/assets/Services/bgCard2.webp";
+import Left from "../../../../public/assets/Icons/wRightArrow.svg";
+import Right from "../../../../public/assets/Icons/wLeftArrow.svg";
+import Group from "../../../../public/assets/Services/waves.svg";
 
 export const serviceData: ServicesPageData = {
   banner: {
     image: Banner,
-    heading: "End-to-End Chatbot Solutions",
+    heading: "Chatbot Solutions",
     content:
-      "Not just AI for show - but solutions that drive impact and results.",
+      "Powerful ai solutions tailored to transform your business",
   },
   sidebarCards: [
     {
@@ -27,6 +27,7 @@ export const serviceData: ServicesPageData = {
       servicesList: [
         "AI Chatbots",
         "AI SAAS Development",
+        "PoC MVP Development",
         "Enterprise AI Automation",
         "Cloud Infrastructure",
         "Full Stack Web Development",
@@ -37,6 +38,7 @@ export const serviceData: ServicesPageData = {
       servicesUrls: [
         "/services/chatbot-solutions",
         "/services/saas-development",
+        "/services/poc-mvp-development",
         "/services/ai-automation",
         "/services/cloud-infrastructure",
         "/services/web-development",

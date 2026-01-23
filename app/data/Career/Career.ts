@@ -1,5 +1,5 @@
 import { PageData } from "@/app/interfaces/careerPage";
-import Career from "../../../public/assets/career/careerM.png";
+import Career from "../../../public/assets/career/careerBanner.webp";
 
 // Data for the page
 export const careerData: PageData = {

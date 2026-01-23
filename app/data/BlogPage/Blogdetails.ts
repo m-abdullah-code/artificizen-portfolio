@@ -1,13 +1,13 @@
-import Background from "../../../public/assets/Blog/blogMain.png";
-import SideImage from "../../../public/assets/CaseStudy/2ndCardbg.jpg.png";
-import S1 from "../../../public/assets/Blog/s1.png";
-import S2 from "../../../public/assets/Blog/s2.png";
-import S3 from "../../../public/assets/Blog/s3.jpg";
+import Background from "../../../public/assets/Blog/blogBanner.webp";
+import SideImage from "../../../public/assets/CaseStudy/sidebar_img.webp";
+import S1 from "../../../public/assets/Blog/s1.webp";
+import S2 from "../../../public/assets/Blog/s2.webp";
+import S3 from "../../../public/assets/Blog/s3.webp";
 import Icon from "../../../public/assets/career/blackIcon.png";
-import B1 from "../../../public/assets/Blog/b1.png";
-import Vector from "../../../public/assets/CaseStudy/Vector.png";
+import B1 from "../../../public/assets/Blog/b1.webp";
+import Vector from "../../../public/assets/CaseStudy/Vector.svg"; 
 import Girl from "../../../public/assets/Blog/g1.jpg";
-import Boy from "../../../public/assets/Blog/b1.jpg";
+import Boy from "../../../public/assets/Blog/b1.webp";
 import { BlogDetailsPageData } from "@/app/interfaces/Blogdetails";
 
 export const blogDetailsData: BlogDetailsPageData = {
@@ -27,18 +27,24 @@ export const blogDetailsData: BlogDetailsPageData = {
   blogTagsIcon: Icon,
   blogPosts: [
     {
-      date: "19 Feb, 2024",
+      id: 1,
+      date: "19-Feb-2024",
+      blog_name: "andrew",
       title:
         "How can I get started with Artificial Intelligence for my business?",
       image: S1,
     },
     {
-      date: "19 April, 2024",
+      id: 2,
+      date: "19-April-2024",
+      blog_name: "andrew",
       title: "The Future of AI: Emerging Trends and Technologies to Watch",
       image: S2,
     },
     {
-      date: "9 July, 2025",
+      id: 3,
+      date: "9-July-2025",
+      blog_name: "andrew",
       title: "Exploring Deep Learning: Unleashing the Power of Neural Networks",
       image: S3,
     },
@@ -85,6 +91,9 @@ export const blogDetailsData: BlogDetailsPageData = {
       "The development of neural networks is a specialized task that requires expertise and experience. Our team of skilled professionals excels in designing and implementing neural network architectures tailored to your specific business needs. From traditional feedforward networks to advanced convolutional and recurrent networks, we have the knowledge and skills to build models that deliver superior performance and accuracy.",
     socialTags: ["/AI/", "/ChatGpt/", "/Neural/"],
     image: B1,
+    date: "19-Feb-2024",
+    blog_name: "Andrew",
+    tags: ["/AI/", "/Business/"],
   },
   footer: {
     headings: ["We are always ready to help you and answer your questions"],

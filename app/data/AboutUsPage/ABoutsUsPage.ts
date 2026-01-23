@@ -1,12 +1,12 @@
-import Background from "../../../public/assets/AboutUs/About Us bg.png";
-import CardImage1 from "../../../public/assets/AboutUs/pioneeringAI.jpg.png";
-import CardImage2 from "../../../public/assets/AboutUs/philosphy.jpg.png";
+import Background from "../../../public/assets/AboutUs/aboutBanner.webp";
+import aiHuman from "../../../public/assets/AboutUs/aiHuman.webp";
+import CardImage2 from "../../../public/assets/AboutUs/philosophy_Img.webp";
 import Umair from "../../../public/assets/AboutUs/umair.png";
 import Talha from "../../../public/assets/AboutUs/talhaNisar.png";
 import Asfar from "../../../public/assets/AboutUs/asfar.png";
 import Zain from "../../../public/assets/AboutUs/zain.png";
 import Shoaib from "../../../public/assets/AboutUs/sohaib.png";
-import Neuro from "../../../public/assets/AboutUs/how it works.png.png";
+import Neuro from "../../../public/assets/AboutUs/ai-speech.webp";
 // import Dart from "../../../public/assets/AboutUs/dart.png";
 // import Credit from "../../../public/assets/AboutUs/creditfixerr.png";
 // import Meomind from "../../../public/assets/AboutUs/meomind.png";
@@ -18,6 +18,7 @@ import Meomind from "../../../public/assets/AboutUs/meomind1.png";
 import Google from "../../../public/assets/AboutUs/google1.png";
 import Iqvia from "../../../public/assets/AboutUs/iqvia1.png";
 import { AboutUsPageData } from "@/app/interfaces/AboutUsPage";
+// import ShareIcon from "@/public/assets/AboutUs/about_share.svg"
 
 export const aboutUsData: AboutUsPageData = {
   background: Background,
@@ -35,7 +36,7 @@ export const aboutUsData: AboutUsPageData = {
       content: [
         "Artificizen is a premier AI solutions company dedicated to transforming how businesses operate and innovate in the digital age. We design, develop, and deploy sophisticated AI systems that solve complex business challenges while remaining intuitive and accessible. Our mission is to democratize the power of artificial intelligence, making cutting-edge technology practical and impactful for organizations of all sizes. We envision a future where AI augments human capabilities, creating unprecedented opportunities for growth, efficiency, and innovation.",
       ],
-      image: CardImage1,
+      image: aiHuman,
       buttonText: "",
       imagePosition: "left",
       lineIndex: 0,
@@ -181,6 +182,11 @@ export const aboutUsData: AboutUsPageData = {
     ],
   },
   imageRow: [
+    { src: Dart, alt: "Dartmounth" },
+    { src: Credit, alt: "Creditfixrr" },
+    { src: Meomind, alt: "Meomind" },
+    { src: Google, alt: "Google" },
+    { src: Iqvia, alt: "Iqvia" },
     { src: Dart, alt: "Dartmounth" },
     { src: Credit, alt: "Creditfixrr" },
     { src: Meomind, alt: "Meomind" },

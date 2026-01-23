@@ -481,17 +481,20 @@ body {
 
 
 
-@keyframes review-ltr {
-  from {
+/* About page slider */
+
+/* Perfect Infinite Ticker - No Gap, No Jump */
+@keyframes ticker {
+  0% {
     transform: translateX(0);
   }
 
-  to {
+  100% {
     transform: translateX(-50%);
   }
 }
 
-.review-marquee-ltr {
+    .review-marquee-ltr {
   animation: review-ltr 15s linear infinite;
   /* Adjust 25s for speed */
 }

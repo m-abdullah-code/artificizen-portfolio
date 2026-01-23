@@ -10,6 +10,8 @@ export interface BlogPost {
 // Interface for blog card data (main blog cards)
 export interface BlogCard {
   id: number;
+  date: string
+  blog_name: string,
   image: StaticImageData;
   heading: string;
   content: string;
