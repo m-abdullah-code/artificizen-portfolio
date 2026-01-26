@@ -247,9 +247,10 @@ body {
       max-width: 1536px;
     }
   }
+
   @media (min-width: 768px) {
     .sticky-column {
-      @apply sticky top-24 self-start;
+      @apply sticky top-30 self-start;
     }
   }
 }
@@ -480,11 +481,7 @@ body {
 }
 
 
-
-/* About page slider */
-
-/* Perfect Infinite Ticker - No Gap, No Jump */
-@keyframes ticker {
+@keyframes review-ltr {
   0% {
     transform: translateX(0);
   }
@@ -494,7 +491,7 @@ body {
   }
 }
 
-    .review-marquee-ltr {
+.review-marquee-ltr {
   animation: review-ltr 15s linear infinite;
   /* Adjust 25s for speed */
 }
