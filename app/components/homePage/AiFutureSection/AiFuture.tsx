@@ -11,20 +11,20 @@ const AiFuture = () => {
           marquee-rtl: -50% to 0 (moves right)
       */}
       <div className="bg-[#0B5CFF] rotate-[2deg] origin-left whitespace-nowrap overflow-hidden"
-      style={{width: "103%", marginLeft: "-1.5%"}}
+        style={{ width: "103%", marginLeft: "-1.5%" }}
       >
         <div className="flex animate-marquee-rtl py-2 sm:py-3 items-center w-max">
           <div className="flex items-center">
             {[...Array(5)].map((_, i) => (
               <p key={i} className="text-white text-[18px] sm:text-[23px] md:text-[43px] lg:text-[58px] xl:text-[70px] font-semibold leading-snug flex-shrink-0">
-                {aiFutureData.topText} &nbsp; • &nbsp;
+                {aiFutureData.topText} &nbsp;
               </p>
             ))}
           </div>
           <div className="flex items-center">
             {[...Array(5)].map((_, i) => (
               <p key={`copy-${i}`} className="text-white text-[18px] sm:text-[23px] md:text-[43px] lg:text-[58px] xl:text-[70px] font-semibold leading-snug flex-shrink-0">
-                {aiFutureData.topText} &nbsp; • &nbsp;
+                {aiFutureData.topText} &nbsp;
               </p>
             ))}
           </div>
@@ -33,7 +33,7 @@ const AiFuture = () => {
 
       {/* Bottom Marquee — Left to Right */}
       <div className="bg-black rotate-[-2deg] origin-left whitespace-nowrap overflow-hidden mt-2 sm:mt-4"
-      style={{width: "103%", marginLeft: "-1.5%"}}
+        style={{ width: "103%", marginLeft: "-1.5%" }}
       >
         <div className="flex animate-marquee-ltr py-2 sm:py-3 items-center w-max">
           <div className="flex items-center">
@@ -41,7 +41,7 @@ const AiFuture = () => {
               <p key={i} className="text-[18px] sm:text-[23px] md:text-[43px] lg:text-[58px] xl:text-[69px] font-bold 
               bg-gradient-to-r from-[#0B5CFF] to-[#FF710C] bg-clip-text text-transparent 
               leading-tight flex-shrink-0">
-                {aiFutureData.bottomText} &nbsp; • &nbsp;
+                {aiFutureData.bottomText} &nbsp;
               </p>
             ))}
           </div>
@@ -50,7 +50,7 @@ const AiFuture = () => {
               <p key={`copy-${i}`} className="text-[18px] sm:text-[23px] md:text-[43px] lg:text-[58px] xl:text-[69px] font-bold 
               bg-gradient-to-r from-[#0B5CFF] to-[#FF710C] bg-clip-text text-transparent 
               leading-tight flex-shrink-0">
-                {aiFutureData.bottomText} &nbsp; • &nbsp;
+                {aiFutureData.bottomText} &nbsp;
               </p>
             ))}
           </div>

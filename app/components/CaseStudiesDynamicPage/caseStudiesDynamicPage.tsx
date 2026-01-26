@@ -22,7 +22,7 @@ const CaseStudiesDynamicPage = ({ data }: { data: CaseStudiesData }) => {
             <div className="flex flex-col md:flex-row gap-7">
 
               {/* Left Column (Cards) */}
-              <div className="w-full md:w-[25%] flex flex-col gap-7">
+              <div className="w-full md:w-[25%] flex flex-col gap-7 sticky-column">
                 {/* Card 1 */}
                 <div className="bg-[#0b1629] rounded-3xl shadow-md py-7 px-7 flex flex-col items-center gap-4">
                   {/* Top Blue Bar with Image */}

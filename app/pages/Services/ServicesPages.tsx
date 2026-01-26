@@ -31,7 +31,7 @@ const ServicesPages = ({ data }: { data: ServicesPageData }) => {
                 {data.sidebarCards.map((card, index) => (
                   <div
                     key={index}
-                    className={`rounded-xl shadow-md p-4 flex flex-col gap-4 ${index === 0 ? "bg-[#F0F2F4] text-[#9B9B9B]" : "text-white"
+                    className={`rounded-xl shadow-md p-4 flex flex-col gap-4 ${index === 0 ? "bg-[#F0F2F4] text-gray-800" : "text-white"
                       } ${index === 2 ? "pt-28" : "pt-5"}`}
                     style={{
                       backgroundImage:
