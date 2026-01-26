@@ -130,11 +130,11 @@ export default function Navigation() {
     flex items-center space-x-1 text-sm font-bold transition-colors px-4 py-3 rounded-4xl
     ${pathname === "/"
       ? isScrolled
-        ? "text-black hover:bg-black hover:text-white"
-        : "text-white hover:text-[var(--text-primary-color)]"
+      ? "text-black hover:bg-black hover:text-white"
+      : "text-white hover:text-white"
       : pathname.startsWith(item.href) && item.href !== "/"
-        ? "bg-white text-black"
-        : "text-white hover:bg-white hover:text-black"
+      ? "bg-white text-black"
+      : "text-white hover:bg-white hover:text-black"
     }
   `}
                 >
