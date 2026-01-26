@@ -23,35 +23,38 @@ const ServicesPages = ({ data }: { data: ServicesPageData }) => {
           />
         </div>
 
-        <div className="px-4 sm:px-6 py-10 sm:py-12">
-          <div className="max-w-[1360px] mx-auto"> 
-            <div className="flex flex-col md:flex-row gap-4">
-
-              {/* Left Column (Cards) */}
-              <div className="w-full md:w-[25%] flex flex-col gap-4">
-                {data.sidebarCards.map((card, index) => (
-                  <div
-                    key={index}
-                    className={`rounded-xl shadow-md p-4 flex flex-col gap-4 ${index === 0 ? "bg-[#F0F2F4] text-[#9B9B9B]" : "text-white"
-                      } ${index === 2 ? "pt-28" : "pt-5"}`}
-                    style={{
-                      backgroundImage:
-                        index > 0 ? `url(${card.image?.src})` : undefined,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                      ...(index > 0 && {
-                        background: `linear-gradient(135deg, rgba(0, 56, 80, 0.8), rgba(0, 24, 49, 0.8)), url(${card.image?.src})`,
-                      }),
-                    }}
-                  >
-                    {card.servicesList &&
-                      card.servicesUrls &&
-                      card.servicesList.length === card.servicesUrls.length && (
-                        <ul className="list-inside text-base mt-5 mb-5 flex flex-col gap-2">
-                          {card.servicesList.map((item, i) => (
-                            <li
-                              key={i}
-                              className="group flex justify-between items-center hover:bg-[#0b5cff] hover:text-white p-2 rounded cursor-pointer transition-all"
+        <div className="py-8">
+          <div className="flex flex-col md:flex-row gap-4">
+            {/* Left Column (Cards) */}
+            <div className="w-full md:w-[25%] flex flex-col gap-4 sticky-column">
+              {data.sidebarCards.map((card, index) => (
+                <div
+                  key={index}
+                  className={`rounded-xl shadow-md p-4 flex flex-col gap-4 ${
+                    index === 0 ? "bg-[#F0F2F4] text-[#9B9B9B]" : "text-white"
+                  } ${index === 2 ? "pt-28" : "pt-5"}`}
+                  style={{
+                    backgroundImage:
+                      index > 0 ? `url(${card.image?.src})` : undefined,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    ...(index > 0 && {
+                      background: `linear-gradient(135deg, rgba(0, 56, 80, 0.8), rgba(0, 24, 49, 0.8)), url(${card.image?.src})`,
+                    }),
+                  }}
+                >
+                  {card.servicesList &&
+                    card.servicesUrls &&
+                    card.servicesList.length === card.servicesUrls.length && (
+                      <ul className="list-inside text-base mt-5 mb-5 flex flex-col gap-2">
+                        {card.servicesList.map((item, i) => (
+                          <li
+                            key={i}
+                            className="group flex justify-between items-center hover:bg-[#0b5cff] hover:text-white p-2 rounded cursor-pointer transition-all"
+                          >
+                            <a
+                              href={card.servicesUrls?.[i]}
+                              className="text-inherit no-underline hover:text-inherit"
                             >
                               <a
                                 href={card.servicesUrls?.[i]}
