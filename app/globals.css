@@ -425,8 +425,7 @@ body {
 }
 
 .animate-marquee-ltr {
-  animation: marquee-ltr 25s linear infinite;
-  /* Adjust 25s for speed */
+  animation: marquee-ltr 50s linear infinite;
 }
 
 @keyframes marquee-rtl {
@@ -440,8 +439,7 @@ body {
 }
 
 .animate-marquee-rtl {
-  animation: marquee-rtl 25s linear infinite;
-  /* Adjust 25s for speed */
+  animation: marquee-rtl 50s linear infinite;
 }
 
 @media (max-width: 768px) {
@@ -560,4 +558,34 @@ body {
     right: -19px;
   }
 
+}
+
+
+
+@keyframes review-ltr {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.review-marquee-ltr {
+  animation: review-ltr 20s linear infinite;
+}
+
+@keyframes review-rtl {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.review-marquee-rtl {
+  animation: review-rtl 20s linear infinite;
 }
