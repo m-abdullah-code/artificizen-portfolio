@@ -33,7 +33,7 @@ const Blog = () => {
                   bg-white rounded-2xl sm:rounded-3xl 
                   overflow-hidden border border-gray-300 
                   flex flex-col items-start"
-                  >
+                >
                   {/* Image Section */}
                   <div className="relative w-full">
                     <Image
@@ -87,7 +87,7 @@ const Blog = () => {
 
 
             {/* Right Column (Cards) */}
-            <div className="w-full md:w-[25%] flex flex-col gap-4">
+            <div className="w-full md:w-[25%] flex flex-col gap-4 sticky-column">
               <SideBlogCard items={blogData.blogItems} />
               <div className="mt-5 mb-5">
                 <SideRecentPost

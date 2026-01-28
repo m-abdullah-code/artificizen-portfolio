@@ -8,6 +8,7 @@ import StorySection from "@/app/shared/StorySection";
 import Footer from "@/app/components/layout/Footer/Footer";
 import { bycData } from "@/app/data/PartnershipPage/PartnershipPage";
 import Link from "next/link";
+import { storySectionData } from "@/app/data/HomePage/UserStory";
 
 const BringYourClient = () => {
   return (
@@ -78,7 +79,7 @@ const BringYourClient = () => {
         <div className="max-w-[1360px] mx-auto ">
           <div className="flex flex-col md:flex-row gap-8">
             {/* Left Side - Image */}
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2 sticky-column">
               <Image
                 src={bycData.uniqueSection.image || bycData.banner.image} // Fallback to banner image if needed
                 alt="BYC"
@@ -215,14 +216,15 @@ const BringYourClient = () => {
       </div>
 
       <div className="mt-20 md:mt-30">
-        <StorySection
+        {/* <StorySection
           data={{
             title: bycData.storySection.title,
             subtitle: bycData.storySection.subtitle,
             starColor: bycData.storySection.starColor,
             cards: bycData.storySection.cards,
           }}
-        />
+        /> */}
+        <StorySection data={storySectionData} />
       </div>
 
       <div className="relative bg-gray-100 py-7 px-10 md:py-10 md:px-14 rounded-xl overflow-hidden mt-10 max-w-[1360px] mx-auto">

@@ -8,7 +8,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const TestimonialSection = () => {
   const [currentIndex, setCurrentIndex] = useState(1); // Start offset for infinite
-  const [playing, setPlaying] = useState(false);
+  const [playing] = useState(false);
   const [counterValue, setCounterValue] = useState(0);
   const [isInView, setIsInView] = useState(false);
   const [transitionEnabled, setTransitionEnabled] = useState(true);

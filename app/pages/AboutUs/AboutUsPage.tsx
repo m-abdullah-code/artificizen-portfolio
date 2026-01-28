@@ -93,30 +93,23 @@ const AboutUsPage = () => {
         />
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-8 items-start mt-15">
-        {/* Left Column */}
-        <div className="w-full lg:w-[45%]">
-          <p className="text-base">/ team /</p>
-          <p
-            className="mt-2 leading-13"
-            style={{
-              fontSize: "clamp(2rem, 5vw, 3rem)",
-            }}
-          >
-            {aboutUsData.team.heading}
-          </p>
-          <p className="text-xl text-black mt-10 md:mt-30">
-            Awesome team members
-          </p>
-          <div className="inline-block mt-10 rounded-full p-[2px] bg-gradient-to-r from-[#0B5CFF99] to-[#FF710C]">
-            <button className="rounded-full bg-white text-black px-10 py-2 text-base font-medium">
-              {aboutUsData.team.buttonText}
-            </button>
-          </div>
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative border border-[#E3E3E3] w-[250px] rounded-xl mt-10">
-              <div className="absolute -right-18 top-28 transform -rotate-90 text-[35px] font-bold text-white tracking-widest">
-                CREATIVE
+      {/* Our Team */}
+      <div className="px-4 sm:px-6 py-10 sm:py-12">
+        <div className="max-w-[1360px] mx-auto">
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
+            {/* Left Column */}
+            <div className="w-full lg:w-1/2 flex flex-col gap-6">
+              <p className="text-sm sm:text-base">/ team /</p>
+              <p className="text-3xl sm:text-5xl md:text-6xl leading-snug font-medium text-[#111]">
+                {aboutUsData.team.heading}
+              </p>
+              <p className="text-lg sm:text-xl text-black mt-6 md:mt-10">
+                Awesome team members
+              </p>
+              <div className="inline-block w-fit mt-6 sm:mt-10 rounded-full p-[2px] bg-gradient-to-r from-[#0B5CFF99] to-[#FF710C]">
+                <button className="rounded-full bg-white text-black px-6 sm:px-10 py-2 sm:py-2.5 text-sm sm:text-base font-medium">
+                  {aboutUsData.team.buttonText}
+                </button>
               </div>
 
               <div className="flex justify-center lg:justify-end mt-6 lg:mt-10">

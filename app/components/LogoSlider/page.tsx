@@ -22,7 +22,7 @@ const logoRow = [...images, ...images, ...images];
 const LogoSlider = () => {
     return (
         <div className="w-full overflow-hidden bg-white py-8">
-            <div className="flex animate-ticker">
+            <div className="flex review-marquee-rtl">
                 {logoRow.map((image, index) => (
                     <div
                         key={index}

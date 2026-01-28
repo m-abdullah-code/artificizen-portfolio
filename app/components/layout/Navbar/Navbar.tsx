@@ -88,12 +88,12 @@ export default function Navigation() {
   return (
     <motion.nav
       variants={navVariants}
-      animate={isScrolled ? "solid" : "transparent"}
+      animate={pathname === "/" && isScrolled ? "solid" : "transparent"}
       transition={{ duration: 0.3, ease: "easeInOut" }}
       className="fixed top-0 left-0 right-0 z-50 px-6"
     >
       <div
-        className={`max-w-[1360px] mx-auto relative top-5 ${pathname === "/" ? "bg-transparent !top-0" : "bg-black px-5"
+        className={`max-w-[1360px] mx-auto relative top-5 ${pathname === "/" ? "bg-transparent !top-0" : "bg-black text-white px-5 shadow-sm"
           } ${isMobileMenuOpen ? "rounded-none" : "rounded-3xl"}`}
       >
         <div className="flex items-center justify-between py-5 min-h-[80px]">
@@ -101,9 +101,9 @@ export default function Navigation() {
           <Link href="/" className="flex items-center">
             <Image
               src={
-                isScrolled && pathname === "/"
-                  ? "/assets/logo/ArtificizenLogo.png" // Logo after scroll
-                  : "/assets/logo/Artificizen-logo.svg" // Logo before scroll
+                pathname === "/" && isScrolled
+                  ? "/assets/logo/ArtificizenLogo.png" // Dark logo for home page white scroll
+                  : "/assets/logo/Artificizen-logo.svg" // Light logo for other pages (black bg) and home top
               }
               alt="Artificizen Logo"
               width={160}
@@ -127,13 +127,15 @@ export default function Navigation() {
                 <Link
                   href={item.href}
                   className={`
-    flex items-center space-x-1 text-sm font-bold transition-colors px-4 py-3 rounded-4xl hover:bg-white
+    flex items-center space-x-1 text-sm font-bold transition-colors px-4 py-3 rounded-4xl
     ${pathname === "/"
-                      ? isScrolled
-                        ? "text-black hover:text-white hover:!bg-black"
-                        : "text-white hover:text-[var(--text-primary-color)]"
-                      : "text-white hover:!bg-white hover:text-black"
-                    }
+      ? isScrolled
+      ? "text-black hover:bg-black hover:text-white"
+      : "text-white hover:text-white"
+      : pathname.startsWith(item.href) && item.href !== "/"
+      ? "bg-white text-black"
+      : "text-white hover:bg-white hover:text-black"
+    }
   `}
                 >
                   <span>{item.label}</span>
@@ -196,17 +198,17 @@ export default function Navigation() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`
     lg:hidden p-2 rounded-md transition-colors
-    ${isScrolled ? "hover:bg-muted" : "hover:bg-white/10"}
+    ${(isScrolled || pathname !== "/") ? "hover:bg-muted" : "hover:bg-white/10"}
   `}
             >
               {isMobileMenuOpen ? (
                 <HiX
-                  className={`w-6 h-6 ${isScrolled && isHomePage ? "text-black" : "text-white"
+                  className={`w-6 h-6 ${((isScrolled && isHomePage) || pathname !== "/") ? "text-black" : "text-white"
                     }`}
                 />
               ) : (
                 <HiMenu
-                  className={`w-6 h-6 ${isScrolled && isHomePage ? "text-black" : "text-white"
+                  className={`w-6 h-6 ${((isScrolled && isHomePage) || pathname !== "/") ? "text-black" : "text-white"
                     }`}
                 />
               )}
